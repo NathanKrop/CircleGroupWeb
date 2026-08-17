@@ -37,6 +37,7 @@ export default function PlaceholderShowcase({
               </div>
             </Reveal>
           ))}
+
           <div className="mt-14 rounded-2xl bg-savanna p-8 text-center sm:p-10">
             <Reveal>
               <h2 className="font-display text-2xl text-sand-light">
@@ -63,6 +64,7 @@ export default function PlaceholderShowcase({
             </Reveal>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
   );
 }
