@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 
 const links = [
   { href: "/about", label: "About" },
+  { href: "/team", label: "Our Team" },
   { href: "/programs", label: "Our Work" },
   { href: "/partners", label: "Partners" },
   { href: "/stories", label: "Stories" },
@@ -25,10 +26,10 @@ export default function NavBar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
+      className={`sticky top-0 z-50 border-b transition-all duration-300 ${
         scrolled
-          ? "bg-sand-light/95 shadow-[0_1px_0_0_rgba(27,58,43,0.1)] backdrop-blur"
-          : "bg-transparent"
+          ? "border-sand-light/10 bg-savanna/95 shadow-[0_1px_0_0_rgba(0,0,0,0.16)] backdrop-blur"
+          : "border-transparent bg-savanna"
       }`}
     >
       <div className="container-page flex h-20 items-center justify-between">
@@ -38,9 +39,9 @@ export default function NavBar() {
             alt="Circle Group Logo"
             width={40}
             height={40}
-            className="h-10 w-10 object-contain"
+            className="h-10 w-10 rounded-full object-contain"
           />
-          <span className="font-display text-lg font-semibold tracking-tight text-savanna">
+          <span className="font-display text-lg font-semibold tracking-tight text-sand-light">
             Circle Group
           </span>
         </Link>
@@ -50,7 +51,7 @@ export default function NavBar() {
             <Link
               key={l.href}
               href={l.href}
-              className="eyebrow text-savanna/80 transition-colors hover:text-rust"
+              className="eyebrow text-sand-light/75 transition-colors hover:text-amber"
             >
               {l.label}
             </Link>
@@ -60,7 +61,7 @@ export default function NavBar() {
         <div className="hidden md:block">
           <Link
             href="/get-involved"
-            className="rounded-full bg-savanna px-5 py-2.5 font-body text-sm font-semibold text-sand-light transition-colors hover:bg-rust"
+            className="rounded-full bg-amber px-5 py-2.5 font-body text-sm font-semibold text-savanna transition-colors hover:bg-sand-light"
           >
             Partner With Us
           </Link>
@@ -73,17 +74,17 @@ export default function NavBar() {
           className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
         >
           <span
-            className={`h-[2px] w-6 bg-savanna transition-transform ${
+            className={`h-[2px] w-6 bg-sand-light transition-transform ${
               open ? "translate-y-2 rotate-45" : ""
             }`}
           />
           <span
-            className={`h-[2px] w-6 bg-savanna transition-opacity ${
+            className={`h-[2px] w-6 bg-sand-light transition-opacity ${
               open ? "opacity-0" : ""
             }`}
           />
           <span
-            className={`h-[2px] w-6 bg-savanna transition-transform ${
+            className={`h-[2px] w-6 bg-sand-light transition-transform ${
               open ? "-translate-y-2 -rotate-45" : ""
             }`}
           />
@@ -91,14 +92,14 @@ export default function NavBar() {
       </div>
 
       {open && (
-        <div className="border-t border-savanna/10 bg-sand-light md:hidden">
+        <div className="border-t border-sand-light/10 bg-savanna md:hidden">
           <nav className="container-page flex flex-col gap-1 py-4">
             {links.map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="py-3 font-display text-xl text-savanna"
+              className="py-3 font-display text-xl text-sand-light"
               >
                 {l.label}
               </Link>
@@ -106,7 +107,7 @@ export default function NavBar() {
             <Link
               href="/get-involved"
               onClick={() => setOpen(false)}
-              className="mt-3 rounded-full bg-savanna px-5 py-3 text-center font-body text-sm font-semibold text-sand-light"
+              className="mt-3 rounded-full bg-amber px-5 py-3 text-center font-body text-sm font-semibold text-savanna"
             >
               Partner With Us
             </Link>

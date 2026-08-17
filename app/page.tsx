@@ -1,8 +1,9 @@
 import Link from "next/link";
-import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import StatCounter from "@/components/StatCounter";
 import Pathway from "@/components/Pathway";
+import HeroCarousel from "@/components/HeroCarousel";
+import VoiceCarousel from "@/components/VoiceCarousel";
 
 const focusAreas = [
   {
@@ -31,7 +32,7 @@ const focusAreas = [
   },
   {
     n: "05",
-    title: "Research &amp; MERL",
+    title: "Research & MERL",
     desc: "Community-based research on youth employment, rural economies, and women's empowerment that sharpens our own work.",
     href: "/research",
   },
@@ -47,13 +48,13 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden bg-sand-light">
+      <section className="page-intro relative overflow-hidden">
         <div className="container-page grid grid-cols-1 items-center gap-14 pb-20 pt-14 md:grid-cols-2 md:pb-28 md:pt-20">
           <div>
             <Reveal>
               <span className="eyebrow inline-flex items-center gap-2 text-rust">
                 <span className="h-1.5 w-1.5 rounded-full bg-rust" />
-                Nairobi, Kenya — Youth &amp; Skills Development
+                Nairobi, Kenya — Youth & Skills Development
               </span>
             </Reveal>
             <Reveal delay={0.08}>
@@ -90,36 +91,12 @@ export default function Home() {
           </div>
 
           <Reveal delay={0.1} y={40} className="relative">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] bg-savanna">
-              <Image
-                src="/img/new/photo_1_2026-03-03_11-10-37.jpg"
-                alt="Circle Group training session with young women"
-                fill
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(232,163,61,0.35),transparent_55%)]" />
-              <svg
-                viewBox="0 0 400 500"
-                className="absolute inset-0 h-full w-full opacity-70"
-                aria-hidden="true"
-              >
-                <path
-                  d="M 40 440 L 150 360 L 260 300 L 370 210"
-                  fill="none"
-                  stroke="#E8A33D"
-                  strokeWidth="2.5"
-                  strokeDasharray="1 10"
-                  strokeLinecap="round"
-                />
-                <circle cx="370" cy="210" r="7" fill="#E8A33D" />
-              </svg>
-            </div>
+            <HeroCarousel />
 
             <div className="absolute -bottom-8 -left-6 w-52 rounded-2xl border border-savanna/10 bg-sand-light p-5 shadow-xl sm:-left-10">
-              <p className="font-display text-3xl text-savanna">4</p>
+              <p className="font-display text-3xl text-savanna">2013</p>
               <p className="mt-1 text-xs leading-snug text-savanna/70">
-                Counties reached with training &amp; mentorship programmes
+                A women-led social enterprise creating opportunity since
               </p>
             </div>
           </Reveal>
@@ -129,7 +106,7 @@ export default function Home() {
         <div className="border-y border-savanna/10 bg-savanna">
           <div className="container-page flex flex-wrap items-center gap-x-10 gap-y-3 py-5 font-mono text-[0.68rem] uppercase tracking-[0.18em] text-sand-light/70">
             <span>Working with —</span>
-            <span>Schools &amp; Institutions</span>
+            <span>Schools & Institutions</span>
             <span className="text-amber">·</span>
             <span>Employers</span>
             <span className="text-amber">·</span>
@@ -141,7 +118,7 @@ export default function Home() {
       </section>
 
       {/* PURPOSE */}
-      <section className="bg-sand-light py-24">
+      <section className="page-intro py-24">
         <div className="container-page">
           <Reveal>
             <p className="max-w-3xl text-balance font-display text-3xl font-medium leading-tight text-savanna sm:text-4xl">
@@ -222,7 +199,7 @@ export default function Home() {
             <Reveal delay={0}><StatCounter value={1200} suffix="+" label="Young people trained" /></Reveal>
             <Reveal delay={0.08}><StatCounter value={70} suffix="%" label="Programme participants who are young women" /></Reveal>
             <Reveal delay={0.16}><StatCounter value={4} label="Counties with active programmes" /></Reveal>
-            <Reveal delay={0.24}><StatCounter value={35} suffix="+" label="School &amp; employer partners" /></Reveal>
+            <Reveal delay={0.24}><StatCounter value={35} suffix="+" label="School & employer partners" /></Reveal>
           </div>
           <p className="mt-4 text-xs text-sand-light/50">
             [Placeholder figures — confirm real numbers with Circle Group before publishing]
@@ -233,7 +210,8 @@ export default function Home() {
       {/* VOICES */}
       <section className="bg-sand py-24">
         <div className="container-page">
-          <Reveal className="mx-auto max-w-3xl text-center">
+          <VoiceCarousel />
+          <Reveal className="hidden">
             <span className="mx-auto mb-8 block font-display text-6xl leading-none text-amber">&ldquo;</span>
             <p className="text-balance font-display text-3xl font-medium leading-snug text-savanna sm:text-4xl">
               The mentorship programme didn&rsquo;t just teach me a skill — it

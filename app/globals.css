@@ -23,6 +23,16 @@ body {
   color: #201C16;
 }
 
+.page-intro {
+  background: radial-gradient(circle at 86% 12%, rgba(232, 163, 61, .16), transparent 25rem), #fbf7ee;
+}
+
+.dark-grid {
+  background-color: #122a1f;
+  background-image: linear-gradient(rgba(241, 232, 214, .055) 1px, transparent 1px), linear-gradient(90deg, rgba(241, 232, 214, .055) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
 ::selection {
   background-color: #E8A33D;
   color: #1B3A2B;

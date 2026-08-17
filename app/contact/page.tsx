@@ -4,7 +4,7 @@ import ContactForm from "@/components/ContactForm";
 
 export default function Contact() {
   return (
-    <section className="bg-sand-light py-16 md:py-24">
+    <section className="page-intro py-16 md:py-24">
       <div className="container-page grid grid-cols-1 gap-16 md:grid-cols-[1fr_1.2fr]">
         <Reveal>
           <span className="eyebrow text-rust">Contact</span>

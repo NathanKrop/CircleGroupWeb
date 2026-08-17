@@ -40,6 +40,7 @@ export default function Footer() {
             <h3 className="eyebrow text-amber">Explore</h3>
             <ul className="mt-5 space-y-3 text-sm text-sand-light/85">
               <li><Link href="/about" className="hover:text-amber">About Us</Link></li>
+              <li><Link href="/team" className="hover:text-amber">Our Team</Link></li>
               <li><Link href="/programs" className="hover:text-amber">Our Work</Link></li>
               <li><Link href="/stories" className="hover:text-amber">Stories</Link></li>
               <li><Link href="/partners" className="hover:text-amber">Partners</Link></li>

@@ -29,6 +29,14 @@ export const metadata: Metadata = {
   description:
     "Circle Group equips young people — especially young women in underserved communities — with life skills, mentorship, and career pathways that turn potential into dignified work.",
   metadataBase: new URL("https://circlegroup.co.ke"),
+  keywords: [
+    "youth skills development",
+    "career readiness Kenya",
+    "mentorship young women",
+    "life skills training",
+    "youth employment",
+    "social enterprise Kenya",
+  ],
   openGraph: {
     title: "Circle Group | From Learning to Earning",
     description:
@@ -37,6 +45,21 @@ export const metadata: Metadata = {
     siteName: "Circle Group",
     locale: "en_KE",
     type: "website",
+    images: [
+      {
+        url: "/img/new/photo_50_2026-03-03_11-10-37.jpg",
+        width: 1200,
+        height: 1500,
+        alt: "Circle Group training session with young women",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Circle Group | From Learning to Earning",
+    description:
+      "Life skills, mentorship, and career pathways for young people across Kenya.",
+    images: ["/img/new/photo_50_2026-03-03_11-10-37.jpg"],
   },
 };
 

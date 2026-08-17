@@ -5,7 +5,7 @@ import ContactForm from "@/components/ContactForm";
 export default function GetInvolved() {
   return (
     <>
-      <section className="bg-sand-light pb-16 pt-16 md:pt-24">
+      <section className="page-intro pb-16 pt-16 md:pt-24">
         <div className="container-page max-w-3xl">
           <Reveal>
             <span className="eyebrow text-rust">Get Involved</span>

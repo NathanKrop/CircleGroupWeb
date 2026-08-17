@@ -24,7 +24,7 @@ const reports = [
 export default function Research() {
   return (
     <>
-      <section className="bg-sand-light pb-16 pt-16 md:pt-24">
+      <section className="page-intro pb-16 pt-16 md:pt-24">
         <div className="container-page max-w-4xl">
           <div className="grid grid-cols-1 gap-14 items-center md:grid-cols-2">
             <Reveal>

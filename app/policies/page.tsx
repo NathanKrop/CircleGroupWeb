@@ -2,7 +2,7 @@ import Reveal from "@/components/Reveal";
 
 export default function Policies() {
   return (
-    <section className="bg-sand-light py-16 md:py-24">
+    <section className="page-intro py-16 md:py-24">
       <div className="container-page max-w-3xl">
         <Reveal>
           <span className="eyebrow text-rust">Policies</span>
