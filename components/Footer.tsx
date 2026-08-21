@@ -22,18 +22,6 @@ export default function Footer() {
               communities — with the skills, mentorship, and pathways to
               dignified work.
             </p>
-            <div className="mt-6 flex gap-4">
-              {["Facebook", "X", "LinkedIn", "Instagram"].map((s) => (
-                <a
-                  key={s}
-                  href="#"
-                  aria-label={s}
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-sand-light/25 text-xs text-sand-light/70 transition-colors hover:border-amber hover:text-amber"
-                >
-                  {s.slice(0, 2)}
-                </a>
-              ))}
-            </div>
           </div>
 
           <div>
@@ -67,9 +55,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="tel:+254700000000" className="hover:text-amber">
-                  [Phone — confirm]
-                </a>
+                Phone / WhatsApp details coming soon
               </li>
             </ul>
           </div>

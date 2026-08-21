@@ -20,11 +20,11 @@ export default function Contact() {
             </div>
             <div>
               <p className="eyebrow text-savanna/50">Phone / WhatsApp</p>
-              <p className="mt-1 font-display text-xl text-savanna">[Phone — confirm]</p>
+              <p className="mt-1 font-display text-xl text-savanna">Details coming soon</p>
             </div>
             <div>
               <p className="eyebrow text-savanna/50">Office</p>
-              <p className="mt-1">Nairobi, Kenya<br />[Full address — confirm]</p>
+              <p className="mt-1">Nairobi, Kenya<br />Full address coming soon</p>
             </div>
           </div>
         </Reveal>

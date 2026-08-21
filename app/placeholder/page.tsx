@@ -24,7 +24,7 @@ export default function PlaceholderPage() {
         {
           eyebrow: "About",
           heading: "4. Origin story & team bios",
-          body: "Team page currently shows names with \"Team profile coming soon.\" Provide each team member's role, 1-line bio, and headshot. Also confirm the 2013 founding story and 2025 Foundation transition.",
+          body: "Official team portraits, names, and titles are now in place. Provide 1-line bios for each team member and confirm the 2013 founding story and 2025 Foundation transition.",
         },
         {
           eyebrow: "Programs",
@@ -44,12 +44,12 @@ export default function PlaceholderPage() {
         {
           eyebrow: "Partners",
           heading: "8. Partner logo wall",
-          body: "Current page has 6 \"Logo\" placeholder tiles. Supply partner logos (.svg/.png) with usage permissions, segmented by Schools / Employers / Development Orgs / Communities.",
+          body: "The logo wall is ready for approved partner logos. Supply .svg or .png files with usage permissions, segmented by Schools / Employers / Development Organisations / Communities.",
         },
         {
           eyebrow: "Contact",
           heading: "9. Office details & WhatsApp",
-          body: "Placeholders remain for: full office address, phone/WhatsApp number. Both reference sites (Allamano) list full contact details — this should be confirmed before launch.",
+          body: "Email and Nairobi location are in place. Confirm the full office address and phone/WhatsApp number before launch.",
         },
         {
           eyebrow: "Policies",

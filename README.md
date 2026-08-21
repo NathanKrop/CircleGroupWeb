@@ -46,13 +46,13 @@ npm start       # serve the production build
 - `/contact` — contact info + form
 - `/policies` — safeguarding & privacy placeholder
 
-## What's still placeholder — do not launch without replacing these
+## What's still pending — do not launch without replacing or confirming these
 
-Every placeholder is marked in-page with `[bracketed text]` so they're easy to
-find and replace. In particular:
+Pending content is marked in-page or listed below so it is easy to find and
+replace. In particular:
 
 1. **Impact numbers** on the homepage stats block — currently illustrative.
-2. **Team bios & photos** on `/about` — currently blank avatar blocks.
+2. **Team bios** on `/team` — official portraits and names are in place; confirm Jane Oduka's title and add approved short biographies.
 3. **All photography** — hero and section images are currently styled
    placeholder blocks (amber ascending-line graphic on savanna green). Swap in
    real participant photography via `next/image` once supplied, with

@@ -83,16 +83,12 @@ export default function Partners() {
           <Reveal>
             <span className="eyebrow text-amber">Our partners</span>
             <h2 className="mt-4 font-display text-3xl text-sand-light">
-              [Partner logo wall — add once logos & usage permissions are confirmed]
+              The work is stronger when we build it together.
             </h2>
+            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-sand-light/70">
+              Partner names and logos will be added here once publication permissions are confirmed.
+            </p>
           </Reveal>
-          <div className="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-4 md:grid-cols-6">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <div key={i} className="flex h-16 items-center justify-center rounded-lg bg-sand-light/10 text-xs text-sand-light/40">
-                Logo
-              </div>
-            ))}
-          </div>
         </div>
       </section>
     </>

@@ -54,13 +54,14 @@ export default function ContactForm({
     <form onSubmit={handleSubmit} className="space-y-5">
       {fields.includes("name") && (
         <div>
-          <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-savanna/60">
+          <label htmlFor="contact-name" className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-savanna/60">
             Full name
           </label>
           <input
             required
             type="text"
             name="name"
+            id="contact-name"
             value={formData.name}
             onChange={handleChange}
             className={inputClasses}
@@ -70,12 +71,13 @@ export default function ContactForm({
       )}
       {fields.includes("org") && (
         <div>
-          <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-savanna/60">
+          <label htmlFor="contact-org" className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-savanna/60">
             Organisation
           </label>
           <input
             type="text"
             name="org"
+            id="contact-org"
             value={formData.org}
             onChange={handleChange}
             className={inputClasses}
@@ -85,13 +87,14 @@ export default function ContactForm({
       )}
       {fields.includes("email") && (
         <div>
-          <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-savanna/60">
+          <label htmlFor="contact-email" className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-savanna/60">
             Email
           </label>
           <input
             required
             type="email"
             name="email"
+            id="contact-email"
             value={formData.email}
             onChange={handleChange}
             className={inputClasses}
@@ -101,12 +104,13 @@ export default function ContactForm({
       )}
       {fields.includes("phone") && (
         <div>
-          <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-savanna/60">
+          <label htmlFor="contact-phone" className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-savanna/60">
             Phone / WhatsApp
           </label>
           <input
             type="tel"
             name="phone"
+            id="contact-phone"
             value={formData.phone}
             onChange={handleChange}
             className={inputClasses}
@@ -116,13 +120,14 @@ export default function ContactForm({
       )}
       {fields.includes("message") && (
         <div>
-          <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-savanna/60">
+          <label htmlFor="contact-message" className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-savanna/60">
             Message
           </label>
           <textarea
             required
             rows={5}
             name="message"
+            id="contact-message"
             value={formData.message}
             onChange={handleChange}
             className={inputClasses}

@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from "react";
 
-const WHATSAPP_NUMBER = "254700000000"; // [PLACEHOLDER — confirm with client]
 const WHATSAPP_MESSAGE = "Hello Circle Group! I'd like to learn more about your programmes.";
 
 export default function WhatsAppButton() {
+  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -13,9 +13,11 @@ export default function WhatsAppButton() {
     return () => clearTimeout(timer);
   }, []);
 
+  if (!whatsappNumber) return null;
+
   return (
     <a
-      href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`}
+      href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with us on WhatsApp"
