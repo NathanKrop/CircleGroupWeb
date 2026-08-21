@@ -13,14 +13,14 @@ export default function PlaceholderShowcase({
   sections: { eyebrow?: string; heading: string; body: string }[];
 }) {
   return (
-    <section className="page-intro py-16 md:py-24">
+    <section className="dark-grid py-16 md:py-24">
       <div className="container-page max-w-3xl">
         <Reveal>
-          <span className="eyebrow text-rust">Circle Group — Placeholder</span>
-          <h1 className="mt-5 text-balance font-display text-5xl font-medium leading-[1.05] text-savanna sm:text-6xl">
+          <span className="eyebrow text-amber">Circle Group — Placeholder</span>
+          <h1 className="mt-5 text-balance font-display text-5xl font-medium leading-[1.05] text-sand-light sm:text-6xl">
             {title}
           </h1>
-          <p className="mt-7 text-lg leading-relaxed text-savanna/80">{description}</p>
+          <p className="mt-7 text-lg leading-relaxed text-sand-light/80">{description}</p>
         </Reveal>
 
         <div className="mt-12 space-y-8">

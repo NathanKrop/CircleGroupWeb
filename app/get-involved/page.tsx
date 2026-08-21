@@ -5,14 +5,14 @@ import ContactForm from "@/components/ContactForm";
 export default function GetInvolved() {
   return (
     <>
-      <section className="page-intro pb-16 pt-16 md:pt-24">
+      <section className="dark-grid pb-16 pt-16 md:pt-24">
         <div className="container-page max-w-3xl">
           <Reveal>
-            <span className="eyebrow text-rust">Get Involved</span>
-            <h1 className="mt-5 text-balance font-display text-5xl font-medium leading-[1.05] text-savanna sm:text-6xl">
+            <span className="eyebrow text-amber">Get Involved</span>
+            <h1 className="mt-5 text-balance font-display text-5xl font-medium leading-[1.05] text-sand-light sm:text-6xl">
               There&rsquo;s a way for you to help.
             </h1>
-            <p className="mt-7 text-lg leading-relaxed text-savanna/80">
+            <p className="mt-7 text-lg leading-relaxed text-sand-light/80">
               Whether you want to partner institutionally, mentor a young
               person directly, or apply to a programme yourself — pick the
               path below.

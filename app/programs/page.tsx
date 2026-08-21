@@ -44,15 +44,15 @@ const programs = [
 export default function Programs() {
   return (
     <>
-      <section className="page-intro pb-16 pt-16 md:pt-24">
+      <section className="dark-grid pb-16 pt-16 md:pt-24">
         <div className="container-page max-w-4xl">
           <div className="grid grid-cols-1 gap-14 items-center md:grid-cols-2">
             <Reveal>
-              <span className="eyebrow text-rust">Our Work</span>
-              <h1 className="mt-5 text-balance font-display text-5xl font-medium leading-[1.05] text-savanna sm:text-6xl">
+              <span className="eyebrow text-amber">Our Work</span>
+              <h1 className="mt-5 text-balance font-display text-5xl font-medium leading-[1.05] text-sand-light sm:text-6xl">
                 Six programmes. One pathway.
               </h1>
-              <p className="mt-7 text-lg leading-relaxed text-savanna/80">
+              <p className="mt-7 text-lg leading-relaxed text-sand-light/80">
                 Every programme below exists to move a young person one step
                 closer to dignified, sustainable work — and to strengthen the
                 schools, employers, and organisations around them.

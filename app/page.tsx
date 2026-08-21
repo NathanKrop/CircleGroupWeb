@@ -44,28 +44,46 @@ const focusAreas = [
   },
 ];
 
+const values = [
+  {
+    icon: "🌱",
+    title: "Integrity",
+    desc: "Upholding your trust",
+  },
+  {
+    icon: "💼",
+    title: "Industry",
+    desc: "Driven by diligence",
+  },
+  {
+    icon: "💡",
+    title: "Ingenuity",
+    desc: "Crafting innovative solutions",
+  },
+];
+
 export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="page-intro relative overflow-hidden">
+      <section className="dark-grid relative overflow-hidden">
         <div className="container-page grid grid-cols-1 items-center gap-14 pb-20 pt-14 md:grid-cols-2 md:pb-28 md:pt-20">
           <div>
             <Reveal>
-              <span className="eyebrow inline-flex items-center gap-2 text-rust">
-                <span className="h-1.5 w-1.5 rounded-full bg-rust" />
-                Nairobi, Kenya — Youth & Skills Development
+              <span className="eyebrow inline-flex items-center gap-2 text-amber">
+                <span className="h-1.5 w-1.5 rounded-full bg-amber" />
+                Youth & Skills Development
               </span>
             </Reveal>
             <Reveal delay={0.08}>
-              <h1 className="mt-6 text-balance font-display text-[2.75rem] font-medium leading-[1.05] text-savanna sm:text-6xl">
+              <h1 className="mt-6 text-balance font-display text-[2.75rem] font-medium leading-[1.05] text-sand-light sm:text-6xl">
                 From learning
                 <br />
-                to <span className="italic text-rust">earning.</span>
+                to <span className="italic text-amber">earning.</span>
               </h1>
             </Reveal>
             <Reveal delay={0.16}>
-              <p className="mt-6 max-w-md text-lg leading-relaxed text-savanna/80">
+              <p className="mt-6 max-w-md text-lg leading-relaxed text-sand-light/80">
                 Circle Group equips young people — especially young women in
                 underserved communities — with the life skills, mentorship,
                 and career pathways that turn potential into dignified work.
@@ -75,13 +93,13 @@ export default function Home() {
               <div className="mt-9 flex flex-wrap items-center gap-4">
                 <Link
                   href="/get-involved"
-                  className="rounded-full bg-savanna px-7 py-3.5 font-body text-sm font-semibold text-sand-light transition-colors hover:bg-rust"
+                  className="rounded-full bg-amber px-7 py-3.5 font-body text-sm font-semibold text-savanna transition-colors hover:bg-sand-light"
                 >
                   Partner With Us
                 </Link>
                 <Link
                   href="/programs"
-                  className="group flex items-center gap-2 font-body text-sm font-semibold text-savanna"
+                  className="group flex items-center gap-2 font-body text-sm font-semibold text-sand-light"
                 >
                   See our work
                   <span className="transition-transform group-hover:translate-x-1">→</span>
@@ -93,9 +111,9 @@ export default function Home() {
           <Reveal delay={0.1} y={40} className="relative">
             <HeroCarousel />
 
-            <div className="absolute -bottom-8 -left-6 w-52 rounded-2xl border border-savanna/10 bg-sand-light p-5 shadow-xl sm:-left-10">
-              <p className="font-display text-3xl text-savanna">2013</p>
-              <p className="mt-1 text-xs leading-snug text-savanna/70">
+            <div className="absolute -bottom-8 -left-6 w-52 rounded-2xl border border-amber/20 bg-savanna p-5 shadow-xl sm:-left-10">
+              <p className="font-display text-3xl text-amber">2013</p>
+              <p className="mt-1 text-xs leading-snug text-sand-light/70">
                 A women-led social enterprise creating opportunity since
               </p>
             </div>
@@ -103,7 +121,7 @@ export default function Home() {
         </div>
 
         {/* trust strip */}
-        <div className="border-y border-savanna/10 bg-savanna">
+        <div className="border-y border-sand-light/10 bg-savanna">
           <div className="container-page flex flex-wrap items-center gap-x-10 gap-y-3 py-5 font-mono text-[0.68rem] uppercase tracking-[0.18em] text-sand-light/70">
             <span>Working with —</span>
             <span>Schools & Institutions</span>
@@ -114,6 +132,25 @@ export default function Home() {
             <span className="text-amber">·</span>
             <span>Community Groups</span>
           </div>
+        </div>
+      </section>
+
+      {/* VALUES - Reference site style */}
+      <section className="bg-savanna py-16">
+        <div className="container-page grid grid-cols-1 gap-8 md:grid-cols-3">
+          {values.map((v, i) => (
+            <Reveal key={v.title} delay={i * 0.1}>
+              <div className="flex items-center gap-5 rounded-2xl border border-sand-light/10 bg-savanna-light p-6">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-amber/15 text-2xl">
+                  {v.icon}
+                </div>
+                <div>
+                  <h4 className="eyebrow text-sand-light/60">{v.desc}</h4>
+                  <h2 className="mt-1 font-display text-2xl text-sand-light">{v.title}</h2>
+                </div>
+              </div>
+            </Reveal>
+          ))}
         </div>
       </section>
 
@@ -199,7 +236,7 @@ export default function Home() {
             <Reveal delay={0}><StatCounter value={1200} suffix="+" label="Young people trained" /></Reveal>
             <Reveal delay={0.08}><StatCounter value={70} suffix="%" label="Programme participants who are young women" /></Reveal>
             <Reveal delay={0.16}><StatCounter value={4} label="Counties with active programmes" /></Reveal>
-            <Reveal delay={0.24}><StatCounter value={35} suffix="+" label="School & employer partners" /></Reveal>
+            <Reveal delay={0.24}><StatCounter value={100} suffix="+" label="School & employer partners" /></Reveal>
           </div>
           <p className="mt-4 text-xs text-sand-light/50">
             [Placeholder figures — confirm real numbers with Circle Group before publishing]

@@ -9,21 +9,21 @@ const config: Config = {
     extend: {
       colors: {
         savanna: {
-          DEFAULT: "#1B3A2B",
-          light: "#254B39",
-          dark: "#122A1F",
+          DEFAULT: "#204020",
+          light: "#2A4A2A",
+          dark: "#183018",
         },
         amber: {
-          DEFAULT: "#E8A33D",
-          light: "#F2BE6E",
-          dark: "#C6822A",
+          DEFAULT: "#A8D038",
+          light: "#C0E060",
+          dark: "#8AB030",
         },
         sand: {
-          DEFAULT: "#F1E8D6",
-          light: "#FBF7EE",
+          DEFAULT: "#F8F8F8",
+          light: "#FFFFFF",
         },
-        ink: "#201C16",
-        rust: "#B5533C",
+        ink: "#100100",
+        rust: "#60B048",
       },
       fontFamily: {
         display: ["var(--font-fraunces)", "serif"],

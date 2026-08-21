@@ -19,23 +19,23 @@ html {
 }
 
 body {
-  background-color: #FBF7EE;
-  color: #201C16;
+  background-color: #F8F8F8;
+  color: #100100;
 }
 
 .page-intro {
-  background: radial-gradient(circle at 86% 12%, rgba(232, 163, 61, .16), transparent 25rem), #fbf7ee;
+  background: radial-gradient(circle at 86% 12%, rgba(168, 208, 56, .16), transparent 25rem), #f8f8f8;
 }
 
 .dark-grid {
-  background-color: #122a1f;
-  background-image: linear-gradient(rgba(241, 232, 214, .055) 1px, transparent 1px), linear-gradient(90deg, rgba(241, 232, 214, .055) 1px, transparent 1px);
+  background-color: #183018;
+  background-image: linear-gradient(rgba(248, 248, 248, .055) 1px, transparent 1px), linear-gradient(90deg, rgba(248, 248, 248, .055) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 
 ::selection {
-  background-color: #E8A33D;
-  color: #1B3A2B;
+  background-color: #A8D038;
+  color: #204020;
 }
 
 .eyebrow {
@@ -62,7 +62,7 @@ body {
 }
 
 .step-line {
-  background-image: linear-gradient(to right, transparent 50%, #E8A33D 50%);
+  background-image: linear-gradient(to right, transparent 50%, #A8D038 50%);
   background-size: 14px 2px;
   background-repeat: repeat-x;
   background-position: center;
@@ -72,7 +72,7 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid #E8A33D;
+  outline: 2px solid #A8D038;
   outline-offset: 3px;
 }
 

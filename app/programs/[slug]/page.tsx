@@ -141,17 +141,17 @@ export default function ProgramDetail({ params }: { params: { slug: string } }) 
 
   return (
     <>
-      <section className="bg-sand-light pb-16 pt-16 md:pt-24">
+      <section className="dark-grid pb-16 pt-16 md:pt-24">
         <div className="container-page max-w-3xl">
           <Reveal>
-            <Link href="/programs" className="eyebrow text-rust hover:text-savanna">
+            <Link href="/programs" className="eyebrow text-amber hover:text-sand-light">
               ← Our Work
             </Link>
-            <span className="mt-6 block eyebrow text-savanna/60">{program.audience}</span>
-            <h1 className="mt-3 text-balance font-display text-5xl font-medium leading-[1.05] text-savanna sm:text-6xl">
+            <span className="mt-6 block eyebrow text-sand-light/60">{program.audience}</span>
+            <h1 className="mt-3 text-balance font-display text-5xl font-medium leading-[1.05] text-sand-light sm:text-6xl">
               {program.title}
             </h1>
-            <p className="mt-7 text-lg leading-relaxed text-savanna/80">{program.summary}</p>
+            <p className="mt-7 text-lg leading-relaxed text-sand-light/80">{program.summary}</p>
           </Reveal>
         </div>
       </section>

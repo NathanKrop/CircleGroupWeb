@@ -79,27 +79,27 @@ export default function ResearchDetail({ params }: { params: { slug: string } })
 
   return (
     <>
-      <section className="page-intro pb-12 pt-16 md:pt-24">
+      <section className="dark-grid pb-12 pt-16 md:pt-24">
         <div className="container-page max-w-3xl">
           <Reveal>
-            <Link href="/research" className="eyebrow text-rust hover:text-savanna">
+            <Link href="/research" className="eyebrow text-amber hover:text-sand-light">
               ← All research
             </Link>
             <div className="mt-6 flex flex-wrap items-center gap-3">
               <span className="rounded-full bg-amber px-3 py-1 text-[0.65rem] font-bold uppercase tracking-wide text-savanna">
                 {item.tag}
               </span>
-              <span className="text-xs text-savanna/50">
+              <span className="text-xs text-sand-light/50">
                 {item.readTime} min read · {item.date}
               </span>
             </div>
-            <h1 className="mt-5 text-balance font-display text-4xl font-medium leading-[1.1] text-savanna sm:text-5xl">
+            <h1 className="mt-5 text-balance font-display text-4xl font-medium leading-[1.1] text-sand-light sm:text-5xl">
               {item.title}
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-savanna/80">
+            <p className="mt-6 text-lg leading-relaxed text-sand-light/80">
               {item.excerpt}
             </p>
-            <p className="mt-4 text-sm text-savanna/60">By {item.author}</p>
+            <p className="mt-4 text-sm text-sand-light/60">By {item.author}</p>
           </Reveal>
         </div>
       </section>

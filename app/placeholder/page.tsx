@@ -14,7 +14,7 @@ export default function PlaceholderPage() {
         {
           eyebrow: "Home · By the numbers",
           heading: "2. Impact statistics",
-          body: "Current placeholders: 1,200+ young people trained · 70% young women · 4 counties · 35+ partners. Replace with verified figures from Circle Group.",
+          body: "Current placeholders: 1,200+ young people trained · 70% young women · 4 counties · 100+ partners. Replace with verified figures from Circle Group.",
         },
         {
           eyebrow: "Home · Voices",

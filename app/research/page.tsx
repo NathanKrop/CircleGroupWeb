@@ -24,15 +24,15 @@ const reports = [
 export default function Research() {
   return (
     <>
-      <section className="page-intro pb-16 pt-16 md:pt-24">
+      <section className="dark-grid pb-16 pt-16 md:pt-24">
         <div className="container-page max-w-4xl">
           <div className="grid grid-cols-1 gap-14 items-center md:grid-cols-2">
             <Reveal>
-              <span className="eyebrow text-rust">Research &amp; Insights</span>
-              <h1 className="mt-5 text-balance font-display text-5xl font-medium leading-[1.05] text-savanna sm:text-6xl">
+              <span className="eyebrow text-amber">Research & Insights</span>
+              <h1 className="mt-5 text-balance font-display text-5xl font-medium leading-[1.05] text-sand-light sm:text-6xl">
                 What we learn shapes what we build.
               </h1>
-              <p className="mt-7 text-lg leading-relaxed text-savanna/80">
+              <p className="mt-7 text-lg leading-relaxed text-sand-light/80">
                 Community-based research on youth employment, rural economies,
                 and women&rsquo;s empowerment — feeding directly back into how
                 our programmes are designed.
@@ -41,7 +41,7 @@ export default function Research() {
               <Reveal delay={0.1}>
                 <div className="mt-8 flex flex-wrap gap-2">
                   {themes.map((t) => (
-                    <span key={t} className="rounded-full border border-savanna/20 px-4 py-1.5 text-xs font-semibold text-savanna/70">
+                    <span key={t} className="rounded-full border border-amber/30 px-4 py-1.5 text-xs font-semibold text-amber">
                       {t}
                     </span>
                   ))}

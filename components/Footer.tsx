@@ -18,8 +18,8 @@ export default function Footer() {
               <span className="font-display text-lg font-semibold">Circle Group</span>
             </div>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-sand/80">
-              Equipping young people — especially young women in underserved
-              communities — with the skills, mentorship, and pathways to
+              Equipping young people, especially young women in underserved
+              communities, with the skills, mentorship, and pathways to
               dignified work.
             </p>
           </div>
