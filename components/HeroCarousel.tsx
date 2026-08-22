@@ -5,9 +5,10 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const slides = [
-  { src: "/img/new/photo_50_2026-03-03_11-10-37.jpg", alt: "Circle Group community engagement", label: "Building opportunity together" },
-  { src: "/img/rays/photo_2026-05-19_13-57-27.jpg", alt: "Young woman learning practical technical skills", label: "Skills for the world of work" },
-  { src: "/img/new/photo_8_2026-03-03_11-10-37.jpg", alt: "Circle Group programme participants", label: "Pathways shaped by people" },
+  { src: "/img/new/photo_15_2026-03-03_11-10-37.jpg", alt: "Circle Group community engagement", label: "Building opportunity together" },
+  { src: "/img/new/photo_25_2026-03-03_11-10-37.jpg", alt: "Young woman learning practical technical skills", label: "Skills for the world of work" },
+  { src: "/img/new/photo_18_2026-03-03_11-10-37.jpg", alt: "Circle Group programme participants", label: "Pathways shaped by people" },
+  { src: "/img/new/photo_70_2026-03-03_11-10-37.jpg", alt: "Circle Group programme participants connecting", label: "Progress made together" },
 ];
 
 export default function HeroCarousel() {

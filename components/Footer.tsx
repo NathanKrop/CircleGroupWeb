@@ -9,13 +9,12 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2.5">
               <Image
-                src="/img/logo/Circle Group.jpg"
-                alt="Circle Group Logo"
-                width={40}
-                height={40}
-                className="h-10 w-10 object-contain"
+                src="/img/logo/Circle_Group-removebg-preview.png"
+                alt="Circle Group"
+                width={192}
+                height={80}
+                className="h-16 w-48 object-contain"
               />
-              <span className="font-display text-lg font-semibold">Circle Group</span>
             </div>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-sand/80">
               Equipping young people, especially young women in underserved
@@ -56,6 +55,16 @@ export default function Footer() {
               </li>
               <li>
                 Phone / WhatsApp details coming soon
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/circle-group-limited/" target="_blank" rel="noreferrer" className="hover:text-amber">
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/circle__group?igsi=eXkyNXRkangwY2h1&utm_source=qr" target="_blank" rel="noreferrer" className="hover:text-amber">
+                  Instagram
+                </a>
               </li>
             </ul>
           </div>

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const links = [
+  { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/team", label: "Our Team" },
   { href: "/programs", label: "Our Work" },
@@ -35,18 +36,15 @@ export default function NavBar() {
       <div className="container-page flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5 group">
           <Image
-            src="/img/logo/Circle Group.jpg"
-            alt="Circle Group Logo"
-            width={40}
-            height={40}
-            className="h-10 w-10 rounded-full object-contain"
+            src="/img/logo/Circle_Group-removebg-preview.png"
+            alt="Circle Group"
+            width={192}
+            height={80}
+            className="h-16 w-48 object-contain"
           />
-          <span className="font-display text-lg font-semibold tracking-tight text-sand-light">
-            Circle Group
-          </span>
         </Link>
 
-        <nav className="hidden items-center gap-9 md:flex">
+        <nav className="hidden items-center gap-7 lg:flex">
           {links.map((l) => (
             <Link
               key={l.href}
@@ -58,7 +56,7 @@ export default function NavBar() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <Link
             href="/get-involved"
             className="rounded-full bg-amber px-5 py-2.5 font-body text-sm font-semibold text-savanna transition-colors hover:bg-sand-light"
@@ -71,7 +69,7 @@ export default function NavBar() {
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
+          className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
         >
           <span
             className={`h-[2px] w-6 bg-sand-light transition-transform ${
@@ -92,7 +90,7 @@ export default function NavBar() {
       </div>
 
       {open && (
-        <div className="border-t border-sand-light/10 bg-savanna md:hidden">
+        <div className="border-t border-sand-light/10 bg-savanna lg:hidden">
           <nav className="container-page flex flex-col gap-1 py-4">
             {links.map((l) => (
               <Link

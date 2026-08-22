@@ -84,9 +84,9 @@ export default function Home() {
             </Reveal>
             <Reveal delay={0.16}>
               <p className="mt-6 max-w-md text-lg leading-relaxed text-sand-light/80">
-                Circle Group equips young people — especially young women in
-                underserved communities — with the life skills, mentorship,
-                and career pathways that turn potential into dignified work.
+                Circle Group equips young people, especially young women, with
+                the practical skills and workplace readiness they need to make
+                the crossing from training into meaningful work.
               </p>
             </Reveal>
             <Reveal delay={0.24}>
