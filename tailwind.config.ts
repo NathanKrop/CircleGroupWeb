@@ -8,22 +8,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        savanna: {
-          DEFAULT: "#204020",
-          light: "#2A4A2A",
-          dark: "#183018",
-        },
+        leaf: "#2E8B57",
+        forest: "#1F5C3E",
         amber: {
           DEFAULT: "#A8D038",
           light: "#C0E060",
           dark: "#8AB030",
         },
         sand: {
-          DEFAULT: "#F8F8F8",
+          DEFAULT: "#F7F5EE",
           light: "#FFFFFF",
         },
-        ink: "#100100",
-        rust: "#60B048",
+        ink: "#17170F",
       },
       fontFamily: {
         display: ["var(--font-fraunces)", "serif"],

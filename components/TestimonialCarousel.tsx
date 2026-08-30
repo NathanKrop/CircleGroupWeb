@@ -61,7 +61,7 @@ export default function TestimonialCarousel() {
             <span className="mb-6 block font-display text-7xl leading-none text-amber">
               &ldquo;
             </span>
-            <p className="max-w-3xl text-balance font-display text-2xl font-medium leading-snug text-savanna sm:text-3xl">
+            <p className="max-w-3xl text-balance font-display text-2xl font-medium leading-snug text-ink sm:text-3xl">
               {t.quote}
             </p>
             <div className="mt-8 flex items-center gap-4">
@@ -75,8 +75,8 @@ export default function TestimonialCarousel() {
                 />
               </div>
               <div className="text-left">
-                <p className="font-semibold text-savanna">{t.author}</p>
-                <p className="text-sm text-savanna/60">{t.role}</p>
+                <p className="font-semibold text-ink">{t.author}</p>
+                <p className="text-sm text-ink/60">{t.role}</p>
               </div>
             </div>
           </div>
@@ -91,7 +91,7 @@ export default function TestimonialCarousel() {
             aria-label={`Show testimonial ${i + 1}`}
             onClick={() => setActive(i)}
             className={`h-2 rounded-full transition-all ${
-              i === active ? "w-8 bg-amber" : "w-2 bg-savanna/20 hover:bg-savanna/40"
+              i === active ? "w-8 bg-amber" : "w-2 bg-leaf/20 hover:bg-forest/40"
             }`}
           />
         ))}

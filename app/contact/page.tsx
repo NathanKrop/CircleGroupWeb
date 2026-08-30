@@ -4,33 +4,35 @@ import ContactForm from "@/components/ContactForm";
 
 export default function Contact() {
   return (
-    <section className="dark-grid py-16 md:py-24">
+    <section className="bg-sand-light py-16 md:py-24">
       <div className="container-page grid grid-cols-1 gap-16 md:grid-cols-[1fr_1.2fr]">
         <Reveal>
-          <span className="eyebrow text-amber">Contact</span>
-          <h1 className="mt-5 text-balance font-display text-5xl font-medium leading-[1.05] text-sand-light">
+          <span className="eyebrow text-forest">Contact</span>
+          <h1 className="mt-5 text-balance font-display text-5xl font-medium leading-[1.05] text-ink">
             Let&rsquo;s talk.
           </h1>
-          <div className="mt-10 space-y-6 text-sand-light/80">
+          <div className="mt-10 space-y-6 text-ink/80">
             <div>
-              <p className="eyebrow text-sand-light/50">Email</p>
-              <a href="mailto:info@circlegroup.co.ke" className="mt-1 block font-display text-xl text-sand-light hover:text-amber">
+              <p className="eyebrow text-ink/50">Email</p>
+              <a href="mailto:info@circlegroup.co.ke" className="mt-1 block font-display text-xl text-leaf hover:text-forest">
                 info@circlegroup.co.ke
               </a>
             </div>
             <div>
-              <p className="eyebrow text-sand-light/50">Phone / WhatsApp</p>
-              <p className="mt-1 font-display text-xl text-sand-light">Details coming soon</p>
+              <p className="eyebrow text-ink/50">Phone / WhatsApp</p>
+              <a href="tel:+254181094157" className="mt-1 block font-display text-xl text-leaf hover:text-forest">
+                +254 181 094 157
+              </a>
             </div>
             <div>
-              <p className="eyebrow text-sand-light/50">Office</p>
+              <p className="eyebrow text-ink/50">Office</p>
               <p className="mt-1">Nairobi, Kenya<br />Full address coming soon</p>
             </div>
           </div>
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="relative rounded-2xl border border-savanna/10 overflow-hidden h-96">
+          <div className="relative rounded-2xl border border-ink/10 overflow-hidden h-96">
             <Image
               src="/img/lux/pexels-lagosfoodbank-6472487.jpg"
               alt="Contact Circle Group"

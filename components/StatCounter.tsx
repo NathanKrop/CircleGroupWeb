@@ -28,11 +28,11 @@ export default function StatCounter({
 
   return (
     <div>
-      <p className="font-display text-5xl font-medium text-savanna md:text-6xl">
+      <p className="font-display text-5xl font-medium text-leaf md:text-6xl">
         <span ref={ref}>{display.toLocaleString()}</span>
         {suffix}
       </p>
-      <p className="mt-2 max-w-[14ch] font-body text-sm text-savanna/70">{label}</p>
+      <p className="mt-2 max-w-[14ch] font-body text-sm text-ink/70">{label}</p>
     </div>
   );
 }

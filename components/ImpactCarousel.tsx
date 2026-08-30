@@ -98,7 +98,7 @@ export default function ImpactCarousel() {
               <Link
                 key={s.title}
                 href={s.href}
-                className="group relative aspect-[4/5] overflow-hidden rounded-2xl bg-savanna md:aspect-[3/4]"
+                className="group relative aspect-[4/5] overflow-hidden rounded-2xl bg-ink md:aspect-[3/4]"
               >
                 <Image
                   src={s.image}
@@ -106,20 +106,20 @@ export default function ImpactCarousel() {
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-savanna via-savanna/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-6">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="rounded-full bg-amber px-3 py-1 text-[0.65rem] font-bold uppercase tracking-wide text-savanna">
+                    <span className="rounded-full bg-amber px-3 py-1 text-[0.65rem] font-bold uppercase tracking-wide text-ink">
                       {s.tag}
                     </span>
-                    <span className="rounded-full border border-sand-light/30 px-3 py-1 text-[0.65rem] font-semibold text-sand-light/80">
+                    <span className="rounded-full border border-white/50 px-3 py-1 text-[0.65rem] font-semibold text-white/85">
                       {s.country}
                     </span>
                   </div>
-                  <h3 className="mt-4 text-lg font-medium leading-snug text-sand-light">
+                  <h3 className="mt-4 text-lg font-medium leading-snug text-white">
                     {s.title}
                   </h3>
-                  <p className="mt-2 line-clamp-2 text-sm text-sand-light/70">
+                  <p className="mt-2 line-clamp-2 text-sm text-white/80">
                     {s.excerpt}
                   </p>
                   <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-amber">
@@ -145,7 +145,7 @@ export default function ImpactCarousel() {
                 setPage(i);
               }}
               className={`h-2 rounded-full transition-all ${
-                i === page ? "w-8 bg-amber" : "w-2 bg-savanna/20 hover:bg-savanna/40"
+                i === page ? "w-8 bg-amber" : "w-2 bg-leaf/20 hover:bg-forest/40"
               }`}
             />
           ))}
@@ -154,14 +154,14 @@ export default function ImpactCarousel() {
           <button
             onClick={prev}
             aria-label="Previous"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-savanna/20 text-savanna transition hover:border-savanna hover:bg-savanna hover:text-sand-light"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-leaf/20 text-leaf transition hover:border-forest hover:bg-forest hover:text-white"
           >
             ←
           </button>
           <button
             onClick={next}
             aria-label="Next"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-savanna/20 text-savanna transition hover:border-savanna hover:bg-savanna hover:text-sand-light"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-leaf/20 text-leaf transition hover:border-forest hover:bg-forest hover:text-white"
           >
             →
           </button>

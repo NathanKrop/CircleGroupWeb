@@ -35,14 +35,14 @@ const stories = [
 export default function Stories() {
   return (
     <>
-      <section className="dark-grid pb-16 pt-16 md:pt-24">
+      <section className="bg-sand-light pb-16 pt-16 md:pt-24">
         <div className="container-page max-w-3xl">
           <Reveal>
-            <span className="eyebrow text-amber">Stories</span>
-            <h1 className="mt-5 text-balance font-display text-5xl font-medium leading-[1.05] text-sand-light sm:text-6xl">
+            <span className="eyebrow text-forest">Stories</span>
+            <h1 className="mt-5 text-balance font-display text-5xl font-medium leading-[1.05] text-ink sm:text-6xl">
               Stories from the field.
             </h1>
-            <p className="mt-7 text-lg leading-relaxed text-sand-light/80">
+            <p className="mt-7 text-lg leading-relaxed text-ink/80">
               Real stories from participants, mentors, and partners — the
               people behind the numbers.
             </p>
@@ -56,9 +56,9 @@ export default function Stories() {
             <Reveal key={s.slug} delay={i * 0.08}>
               <Link
                 href={`/stories/${s.slug}`}
-                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-savanna/10 bg-sand-light transition-shadow hover:shadow-xl"
+                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-ink/10 bg-sand-light transition-shadow hover:shadow-xl"
               >
-                <div className="relative aspect-[4/3] w-full overflow-hidden bg-savanna/10">
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-ink/10">
                   <Image
                     src={s.image}
                     alt={s.title}
@@ -68,18 +68,18 @@ export default function Stories() {
                 </div>
                 <div className="flex flex-1 flex-col p-7">
                   <div className="flex items-center gap-3">
-                    <span className="eyebrow text-rust">{s.tag}</span>
-                    <span className="text-xs text-savanna/40">
+                    <span className="eyebrow text-leaf">{s.tag}</span>
+                    <span className="text-xs text-ink/40">
                       {s.readTime} min read
                     </span>
                   </div>
-                  <h2 className="mt-3 font-display text-xl leading-snug text-savanna">
+                  <h2 className="mt-3 font-display text-xl leading-snug text-ink">
                     {s.title}
                   </h2>
-                  <p className="mt-3 text-sm leading-relaxed text-savanna/70">
+                  <p className="mt-3 text-sm leading-relaxed text-ink/70">
                     {s.excerpt}
                   </p>
-                  <span className="mt-auto pt-6 inline-flex items-center gap-2 text-sm font-semibold text-savanna group-hover:text-rust">
+                  <span className="mt-auto pt-6 inline-flex items-center gap-2 text-sm font-semibold text-leaf group-hover:text-forest">
                     Read story
                     <span className="transition-transform group-hover:translate-x-1">→</span>
                   </span>

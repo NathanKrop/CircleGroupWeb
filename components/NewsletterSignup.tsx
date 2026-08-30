@@ -29,13 +29,13 @@ export default function NewsletterSignup() {
 
   return (
     <div>
-      <h3 className="eyebrow text-amber">Stay in touch</h3>
-      <p className="mt-4 text-sm text-sand-light/80">
+      <h3 className="eyebrow text-forest">Stay in touch</h3>
+      <p className="mt-4 text-sm text-ink/80">
         Monthly updates on our programmes, research, and impact stories.
       </p>
 
       {status === "sent" ? (
-        <p className="mt-5 text-sm text-amber">
+        <p className="mt-5 text-sm text-forest">
           Thanks for subscribing — we&rsquo;ll be in touch.
         </p>
       ) : (
@@ -47,12 +47,12 @@ export default function NewsletterSignup() {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="you@example.com"
             aria-label="Email address"
-            className="w-full rounded-full border border-sand-light/20 bg-sand-light/10 px-4 py-2.5 text-sm text-sand-light placeholder:text-sand-light/40 focus:border-amber focus:outline-none"
+            className="w-full rounded-full border border-ink/20 bg-white px-4 py-2.5 text-sm text-ink placeholder:text-ink/40 focus:border-leaf focus:outline-none"
           />
           <button
             type="submit"
             disabled={status === "submitting"}
-            className="shrink-0 rounded-full bg-amber px-5 py-2.5 text-sm font-semibold text-savanna transition-colors hover:bg-sand-light disabled:opacity-60"
+            className="shrink-0 rounded-full bg-leaf px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-forest disabled:opacity-60"
           >
             {status === "submitting" ? "..." : "Sign up"}
           </button>
@@ -60,7 +60,7 @@ export default function NewsletterSignup() {
       )}
 
       {status === "error" && (
-        <p className="mt-3 text-xs text-rust">
+        <p className="mt-3 text-xs text-leaf">
           Something went wrong. Please try again.
         </p>
       )}

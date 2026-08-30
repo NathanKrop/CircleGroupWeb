@@ -33,7 +33,7 @@ export default function FeaturedContent() {
         <Reveal key={item.title} delay={i * 0.08}>
           <Link
             href={item.href}
-            className={`group grid grid-cols-1 overflow-hidden rounded-[2rem] border border-savanna/10 bg-sand-light transition-shadow hover:shadow-xl md:grid-cols-2 ${
+            className={`group grid grid-cols-1 overflow-hidden rounded-[2rem] border border-ink/10 bg-sand-light transition-shadow hover:shadow-xl md:grid-cols-2 ${
               i % 2 === 1 ? "md:[&>*:first-child]:order-2" : ""
             }`}
           >
@@ -46,13 +46,13 @@ export default function FeaturedContent() {
               />
             </div>
             <div className="flex flex-col justify-center p-8 sm:p-12">
-              <h3 className="font-display text-2xl font-medium text-savanna sm:text-3xl">
+              <h3 className="font-display text-2xl font-medium text-ink sm:text-3xl">
                 {item.title}
               </h3>
-              <p className="mt-4 text-sm leading-relaxed text-savanna/70 sm:text-base">
+              <p className="mt-4 text-sm leading-relaxed text-ink/70 sm:text-base">
                 {item.body}
               </p>
-              <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-rust">
+              <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-leaf">
                 {item.cta}
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </span>

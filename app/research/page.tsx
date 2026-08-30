@@ -24,15 +24,15 @@ const reports = [
 export default function Research() {
   return (
     <>
-      <section className="dark-grid pb-16 pt-16 md:pt-24">
+      <section className="bg-sand-light pb-16 pt-16 md:pt-24">
         <div className="container-page max-w-4xl">
           <div className="grid grid-cols-1 gap-14 items-center md:grid-cols-2">
             <Reveal>
-              <span className="eyebrow text-amber">Research & Insights</span>
-              <h1 className="mt-5 text-balance font-display text-5xl font-medium leading-[1.05] text-sand-light sm:text-6xl">
+              <span className="eyebrow text-forest">Research & Insights</span>
+              <h1 className="mt-5 text-balance font-display text-5xl font-medium leading-[1.05] text-ink sm:text-6xl">
                 What we learn shapes what we build.
               </h1>
-              <p className="mt-7 text-lg leading-relaxed text-sand-light/80">
+              <p className="mt-7 text-lg leading-relaxed text-ink/80">
                 Community-based research on youth employment, rural economies,
                 and women&rsquo;s empowerment — feeding directly back into how
                 our programmes are designed.
@@ -41,7 +41,7 @@ export default function Research() {
               <Reveal delay={0.1}>
                 <div className="mt-8 flex flex-wrap gap-2">
                   {themes.map((t) => (
-                    <span key={t} className="rounded-full border border-amber/30 px-4 py-1.5 text-xs font-semibold text-amber">
+                    <span key={t} className="rounded-full border border-forest/30 px-4 py-1.5 text-xs font-semibold text-forest">
                       {t}
                     </span>
                   ))}
@@ -63,19 +63,19 @@ export default function Research() {
       </section>
 
       <section className="bg-sand pb-24">
-        <div className="container-page divide-y divide-savanna/10 rounded-2xl border border-savanna/10 bg-sand-light">
+        <div className="container-page divide-y divide-ink/10 rounded-2xl border border-ink/10 bg-sand-light">
           {reports.map((r, i) => (
             <Reveal key={r.title} delay={i * 0.06}>
               <div className="flex flex-col gap-2 p-8 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <span className="eyebrow text-rust">{r.theme}</span>
-                  <h2 className="mt-2 font-display text-xl text-savanna">{r.title}</h2>
+                  <span className="eyebrow text-leaf">{r.theme}</span>
+                  <h2 className="mt-2 font-display text-xl text-ink">{r.title}</h2>
                 </div>
-                <span className="font-mono text-xs text-savanna/50">{r.date}</span>
+                <span className="font-mono text-xs text-ink/50">{r.date}</span>
               </div>
             </Reveal>
           ))}
-          <div className="p-8 text-sm text-savanna/50">
+          <div className="p-8 text-sm text-ink/50">
             [Placeholder research list — replace with real reports once supplied by Circle Group]
           </div>
         </div>

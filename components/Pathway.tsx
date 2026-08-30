@@ -50,14 +50,14 @@ export default function Pathway() {
               className="flex h-14 w-14 items-center justify-center rounded-full border-2 font-mono text-sm font-semibold"
               style={{
                 borderColor: "#A8D038",
-                color: "#204020",
+                color: "#2E8B57",
                 background: i === stages.length - 1 ? "#A8D038" : "transparent",
               }}
             >
               {s.n}
             </div>
-            <h3 className="mt-5 font-display text-2xl text-savanna">{s.label}</h3>
-            <p className="mt-1.5 text-sm text-savanna/70">{s.desc}</p>
+            <h3 className="mt-5 font-display text-2xl text-leaf">{s.label}</h3>
+            <p className="mt-1.5 text-sm text-ink/70">{s.desc}</p>
           </motion.div>
         ))}
       </div>

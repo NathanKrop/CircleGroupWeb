@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 const inputClasses =
-  "w-full rounded-xl border border-savanna/15 bg-sand-light px-4 py-3 text-savanna placeholder:text-savanna/40 focus:border-amber";
+  "w-full rounded-xl border border-ink/15 bg-white px-4 py-3 text-ink placeholder:text-ink/40 focus:border-leaf";
 
 export default function ContactForm({
   fields = ["name", "email", "org", "message"],
@@ -54,7 +54,7 @@ export default function ContactForm({
     <form onSubmit={handleSubmit} className="space-y-5">
       {fields.includes("name") && (
         <div>
-          <label htmlFor="contact-name" className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-savanna/60">
+          <label htmlFor="contact-name" className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-ink/60">
             Full name
           </label>
           <input
@@ -71,7 +71,7 @@ export default function ContactForm({
       )}
       {fields.includes("org") && (
         <div>
-          <label htmlFor="contact-org" className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-savanna/60">
+          <label htmlFor="contact-org" className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-ink/60">
             Organisation
           </label>
           <input
@@ -87,7 +87,7 @@ export default function ContactForm({
       )}
       {fields.includes("email") && (
         <div>
-          <label htmlFor="contact-email" className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-savanna/60">
+          <label htmlFor="contact-email" className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-ink/60">
             Email
           </label>
           <input
@@ -104,7 +104,7 @@ export default function ContactForm({
       )}
       {fields.includes("phone") && (
         <div>
-          <label htmlFor="contact-phone" className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-savanna/60">
+          <label htmlFor="contact-phone" className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-ink/60">
             Phone / WhatsApp
           </label>
           <input
@@ -120,7 +120,7 @@ export default function ContactForm({
       )}
       {fields.includes("message") && (
         <div>
-          <label htmlFor="contact-message" className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-savanna/60">
+          <label htmlFor="contact-message" className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-ink/60">
             Message
           </label>
           <textarea
@@ -139,18 +139,18 @@ export default function ContactForm({
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="w-full rounded-full bg-savanna px-6 py-3.5 font-body text-sm font-semibold text-sand-light transition-colors hover:bg-rust disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+        className="w-full rounded-full bg-leaf px-6 py-3.5 font-body text-sm font-semibold text-white transition-colors hover:bg-forest disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
       >
         {status === "submitting" ? "Sending..." : submitLabel}
       </button>
 
       {status === "sent" && (
-        <p className="text-sm text-savanna/70">
+        <p className="text-sm text-ink/70">
           Thanks — your message has been sent. We&rsquo;ll be in touch soon.
         </p>
       )}
       {status === "error" && (
-        <p className="text-sm text-rust">
+        <p className="text-sm text-leaf">
           Something went wrong. Please try again or email us directly at{" "}
           <a href="mailto:info@circlegroup.co.ke" className="underline">
             info@circlegroup.co.ke

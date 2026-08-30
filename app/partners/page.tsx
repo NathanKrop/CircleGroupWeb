@@ -28,15 +28,15 @@ const segments = [
 export default function Partners() {
   return (
     <>
-      <section className="dark-grid pb-16 pt-16 md:pt-24">
+      <section className="bg-sand-light pb-16 pt-16 md:pt-24">
         <div className="container-page max-w-4xl">
           <div className="grid grid-cols-1 gap-14 items-center md:grid-cols-2">
             <Reveal>
-              <span className="eyebrow text-amber">Who We Work With</span>
-              <h1 className="mt-5 text-balance font-display text-5xl font-medium leading-[1.05] text-sand-light sm:text-6xl">
+              <span className="eyebrow text-forest">Who We Work With</span>
+              <h1 className="mt-5 text-balance font-display text-5xl font-medium leading-[1.05] text-ink sm:text-6xl">
                 Nothing here happens alone.
               </h1>
-              <p className="mt-7 text-lg leading-relaxed text-sand-light/80">
+              <p className="mt-7 text-lg leading-relaxed text-ink/80">
                 Circle Group collaborates with schools, youth associations,
                 employers, development organisations, and communities to
                 connect trained young people to real-world opportunity.
@@ -61,14 +61,14 @@ export default function Partners() {
         <div className="container-page grid grid-cols-1 gap-8 md:grid-cols-2">
           {segments.map((s, i) => (
             <Reveal key={s.title} delay={i * 0.08}>
-              <div className="flex h-full flex-col justify-between rounded-2xl border border-savanna/10 bg-sand-light p-9">
+              <div className="flex h-full flex-col justify-between rounded-2xl border border-ink/10 bg-sand-light p-9">
                 <div>
-                  <h2 className="font-display text-2xl text-savanna">{s.title}</h2>
-                  <p className="mt-3 text-sm leading-relaxed text-savanna/70">{s.desc}</p>
+                  <h2 className="font-display text-2xl text-ink">{s.title}</h2>
+                  <p className="mt-3 text-sm leading-relaxed text-ink/70">{s.desc}</p>
                 </div>
                 <Link
                   href="/get-involved"
-                  className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-savanna px-5 py-2.5 text-sm font-semibold text-sand-light transition-colors hover:bg-rust"
+                  className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-leaf px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-forest"
                 >
                   {s.cta}
                   <span>→</span>
@@ -79,14 +79,14 @@ export default function Partners() {
         </div>
       </section>
 
-      <section className="bg-savanna py-20">
+      <section className="bg-sand py-20">
         <div className="container-page">
           <Reveal>
-            <span className="eyebrow text-amber">Our partners</span>
-            <h2 className="mt-4 font-display text-3xl text-sand-light">
+            <span className="eyebrow text-forest">Our partners</span>
+            <h2 className="mt-4 font-display text-3xl text-leaf">
               The work is stronger when we build it together.
             </h2>
-            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-sand-light/70">
+            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink/70">
               Partner names and logos will be added here once publication permissions are confirmed.
             </p>
           </Reveal>

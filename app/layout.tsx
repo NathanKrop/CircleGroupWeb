@@ -73,7 +73,7 @@ export default function RootLayout({
       <body className="font-body antialiased">
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:m-3 focus:rounded focus:bg-savanna focus:px-4 focus:py-2 focus:text-sand-light"
+          className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:m-3 focus:rounded focus:bg-forest focus:px-4 focus:py-2 focus:text-white"
         >
           Skip to main content
         </a>

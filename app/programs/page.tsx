@@ -44,15 +44,15 @@ const programs = [
 export default function Programs() {
   return (
     <>
-      <section className="dark-grid pb-16 pt-16 md:pt-24">
+      <section className="bg-sand-light pb-16 pt-16 md:pt-24">
         <div className="container-page max-w-4xl">
           <div className="grid grid-cols-1 gap-14 items-center md:grid-cols-2">
             <Reveal>
-              <span className="eyebrow text-amber">Our Work</span>
-              <h1 className="mt-5 text-balance font-display text-5xl font-medium leading-[1.05] text-sand-light sm:text-6xl">
+              <span className="eyebrow text-forest">Our Work</span>
+              <h1 className="mt-5 text-balance font-display text-5xl font-medium leading-[1.05] text-ink sm:text-6xl">
                 Six programmes. One pathway.
               </h1>
-              <p className="mt-7 text-lg leading-relaxed text-sand-light/80">
+              <p className="mt-7 text-lg leading-relaxed text-ink/80">
                 Every programme below exists to move a young person one step
                 closer to dignified, sustainable work — and to strengthen the
                 schools, employers, and organisations around them.
@@ -73,25 +73,25 @@ export default function Programs() {
       </section>
 
       <section className="bg-sand pb-24">
-        <div className="container-page grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-savanna/10 bg-savanna/10 md:grid-cols-2">
+        <div className="container-page grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-ink/10 bg-ink/10 md:grid-cols-2">
           {programs.map((p, i) => (
             <Reveal key={p.slug} delay={i * 0.05} y={16}>
               <Link
                 href={`/programs/${p.slug}`}
-                className="group flex h-full flex-col justify-between bg-sand-light p-9 transition-colors hover:bg-savanna"
+                className="group flex h-full flex-col justify-between bg-sand-light p-9 transition-colors hover:bg-leaf"
               >
                 <div>
-                  <span className="eyebrow text-rust group-hover:text-amber">
+                  <span className="eyebrow text-leaf group-hover:text-white">
                     {p.audience}
                   </span>
-                  <h2 className="mt-4 font-display text-2xl text-savanna group-hover:text-sand-light">
+                  <h2 className="mt-4 font-display text-2xl text-ink group-hover:text-white">
                     {p.title}
                   </h2>
-                  <p className="mt-3 text-sm leading-relaxed text-savanna/70 group-hover:text-sand-light/75">
+                  <p className="mt-3 text-sm leading-relaxed text-ink/70 group-hover:text-white/85">
                     {p.desc}
                   </p>
                 </div>
-                <span className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-savanna group-hover:text-amber">
+                <span className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-leaf group-hover:text-white">
                   View programme
                   <span className="transition-transform group-hover:translate-x-1">→</span>
                 </span>

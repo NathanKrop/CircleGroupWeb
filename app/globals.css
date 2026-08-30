@@ -19,23 +19,17 @@ html {
 }
 
 body {
-  background-color: #F8F8F8;
-  color: #100100;
+  background-color: #FFFFFF;
+  color: #17170F;
 }
 
 .page-intro {
-  background: radial-gradient(circle at 86% 12%, rgba(168, 208, 56, .16), transparent 25rem), #f8f8f8;
-}
-
-.dark-grid {
-  background-color: #183018;
-  background-image: linear-gradient(rgba(248, 248, 248, .055) 1px, transparent 1px), linear-gradient(90deg, rgba(248, 248, 248, .055) 1px, transparent 1px);
-  background-size: 48px 48px;
+  background: radial-gradient(circle at 86% 12%, rgba(46, 139, 87, .1), transparent 25rem), #F7F5EE;
 }
 
 ::selection {
   background-color: #A8D038;
-  color: #204020;
+  color: #17170F;
 }
 
 .eyebrow {

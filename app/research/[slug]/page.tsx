@@ -79,27 +79,27 @@ export default function ResearchDetail({ params }: { params: { slug: string } })
 
   return (
     <>
-      <section className="dark-grid pb-12 pt-16 md:pt-24">
+      <section className="bg-sand-light pb-12 pt-16 md:pt-24">
         <div className="container-page max-w-3xl">
           <Reveal>
-            <Link href="/research" className="eyebrow text-amber hover:text-sand-light">
+            <Link href="/research" className="eyebrow text-leaf hover:text-forest">
               ← All research
             </Link>
             <div className="mt-6 flex flex-wrap items-center gap-3">
-              <span className="rounded-full bg-amber px-3 py-1 text-[0.65rem] font-bold uppercase tracking-wide text-savanna">
+              <span className="rounded-full bg-amber px-3 py-1 text-[0.65rem] font-bold uppercase tracking-wide text-ink">
                 {item.tag}
               </span>
-              <span className="text-xs text-sand-light/50">
+              <span className="text-xs text-ink/50">
                 {item.readTime} min read · {item.date}
               </span>
             </div>
-            <h1 className="mt-5 text-balance font-display text-4xl font-medium leading-[1.1] text-sand-light sm:text-5xl">
+            <h1 className="mt-5 text-balance font-display text-4xl font-medium leading-[1.1] text-ink sm:text-5xl">
               {item.title}
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-sand-light/80">
+            <p className="mt-6 text-lg leading-relaxed text-ink/80">
               {item.excerpt}
             </p>
-            <p className="mt-4 text-sm text-sand-light/60">By {item.author}</p>
+            <p className="mt-4 text-sm text-ink/60">By {item.author}</p>
           </Reveal>
         </div>
       </section>
@@ -120,29 +120,29 @@ export default function ResearchDetail({ params }: { params: { slug: string } })
           <div className="mt-12 space-y-6">
             {item.content.map((para, i) => (
               <Reveal key={i} delay={i * 0.05}>
-                <p className="text-lg leading-relaxed text-savanna/80">{para}</p>
+                <p className="text-lg leading-relaxed text-ink/80">{para}</p>
               </Reveal>
             ))}
           </div>
 
           <Reveal className="mt-14">
-            <div className="rounded-2xl bg-savanna p-8 text-center sm:p-10">
-              <h2 className="font-display text-2xl text-sand-light">
+            <div className="rounded-2xl bg-sand p-8 text-center sm:p-10">
+              <h2 className="font-display text-2xl text-leaf">
                 Want to access the full report?
               </h2>
-              <p className="mt-3 text-sand-light/70">
+              <p className="mt-3 text-ink/70">
                 Contact us to request the full research report or discuss partnership opportunities.
               </p>
               <div className="mt-6 flex flex-wrap justify-center gap-3">
                 <Link
                   href="/contact"
-                  className="rounded-full bg-amber px-6 py-3 text-sm font-semibold text-savanna transition-colors hover:bg-sand-light"
+                  className="rounded-full bg-leaf px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-forest"
                 >
                   Request the report
                 </Link>
                 <Link
                   href="/get-involved"
-                  className="rounded-full border border-sand-light/30 px-6 py-3 text-sm font-semibold text-sand-light transition-colors hover:border-amber hover:text-amber"
+                  className="rounded-full border border-leaf px-6 py-3 text-sm font-semibold text-leaf transition-colors hover:border-forest hover:text-forest"
                 >
                   Get involved
                 </Link>

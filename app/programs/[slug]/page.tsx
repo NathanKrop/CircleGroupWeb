@@ -141,17 +141,17 @@ export default function ProgramDetail({ params }: { params: { slug: string } }) 
 
   return (
     <>
-      <section className="dark-grid pb-16 pt-16 md:pt-24">
+      <section className="bg-sand-light pb-16 pt-16 md:pt-24">
         <div className="container-page max-w-3xl">
           <Reveal>
-            <Link href="/programs" className="eyebrow text-amber hover:text-sand-light">
+            <Link href="/programs" className="eyebrow text-leaf hover:text-forest">
               ← Our Work
             </Link>
-            <span className="mt-6 block eyebrow text-sand-light/60">{program.audience}</span>
-            <h1 className="mt-3 text-balance font-display text-5xl font-medium leading-[1.05] text-sand-light sm:text-6xl">
+            <span className="mt-6 block eyebrow text-ink/60">{program.audience}</span>
+            <h1 className="mt-3 text-balance font-display text-5xl font-medium leading-[1.05] text-ink sm:text-6xl">
               {program.title}
             </h1>
-            <p className="mt-7 text-lg leading-relaxed text-sand-light/80">{program.summary}</p>
+            <p className="mt-7 text-lg leading-relaxed text-ink/80">{program.summary}</p>
           </Reveal>
         </div>
       </section>
@@ -159,15 +159,15 @@ export default function ProgramDetail({ params }: { params: { slug: string } }) 
       <section className="bg-sand py-20">
         <div className="container-page grid grid-cols-1 gap-16 md:grid-cols-[1fr_1.3fr]">
           <Reveal>
-            <span className="eyebrow text-rust">Who it&rsquo;s for</span>
-            <p className="mt-4 font-display text-2xl leading-snug text-savanna">
+            <span className="eyebrow text-leaf">Who it&rsquo;s for</span>
+            <p className="mt-4 font-display text-2xl leading-snug text-leaf">
               {program.whoFor}
             </p>
             <div className="mt-10">
-              <span className="eyebrow text-rust">Outcomes</span>
+              <span className="eyebrow text-leaf">Outcomes</span>
               <ul className="mt-4 space-y-3">
                 {program.outcomes.map((o) => (
-                  <li key={o} className="flex items-start gap-3 text-savanna/80">
+                  <li key={o} className="flex items-start gap-3 text-ink/80">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber" />
                     {o}
                   </li>
@@ -177,15 +177,15 @@ export default function ProgramDetail({ params }: { params: { slug: string } }) 
           </Reveal>
 
           <div>
-            <span className="eyebrow text-rust">How it works</span>
+            <span className="eyebrow text-leaf">How it works</span>
             <ol className="mt-6 space-y-8">
               {program.steps.map((s, i) => (
                 <Reveal key={s.title} delay={i * 0.08}>
                   <div className="flex gap-6">
-                    <span className="font-mono text-sm text-amber">0{i + 1}</span>
+                    <span className="font-mono text-sm text-forest">0{i + 1}</span>
                     <div>
-                      <h3 className="font-display text-xl text-savanna">{s.title}</h3>
-                      <p className="mt-1.5 text-sm leading-relaxed text-savanna/70">
+                      <h3 className="font-display text-xl text-ink">{s.title}</h3>
+                      <p className="mt-1.5 text-sm leading-relaxed text-ink/70">
                         {s.desc}
                       </p>
                     </div>
@@ -197,19 +197,19 @@ export default function ProgramDetail({ params }: { params: { slug: string } }) 
         </div>
       </section>
 
-      <section className="bg-savanna py-20">
-        <div className="container-page flex flex-col items-start justify-between gap-8 rounded-[2rem] bg-savanna-light p-10 sm:flex-row sm:items-center sm:p-14">
+      <section className="bg-sand py-20">
+        <div className="container-page flex flex-col items-start justify-between gap-8 rounded-[2rem] bg-leaf p-10 sm:flex-row sm:items-center sm:p-14">
           <div>
-            <h2 className="font-display text-3xl text-sand-light">
+            <h2 className="font-display text-3xl text-white">
               Bring {program.title} to your community.
             </h2>
-            <p className="mt-2 text-sand-light/70">
+            <p className="mt-2 text-white/80">
               Schools, employers, and organisations can partner with us to run this programme.
             </p>
           </div>
           <Link
             href="/get-involved"
-            className="shrink-0 rounded-full bg-amber px-7 py-3.5 text-center font-body text-sm font-semibold text-savanna transition-colors hover:bg-sand-light"
+            className="shrink-0 rounded-full bg-amber px-7 py-3.5 text-center font-body text-sm font-semibold text-ink transition-colors hover:bg-white"
           >
             Get involved
           </Link>
