@@ -8,15 +8,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.3fr_1fr_1fr_1.1fr]">
           <div>
             <div className="flex items-center gap-2.5">
-              <span className="inline-flex rounded-lg bg-forest px-2 py-1">
-                <Image
-                  src="/img/logo/Circle_Group-removebg-preview.png"
-                  alt="Circle Group"
-                  width={192}
-                  height={80}
-                  className="h-14 w-48 object-contain"
-                />
-              </span>
+              <Image
+                src="/img/logo/Circle_Group-removebg-preview.png"
+                alt="Circle Group"
+                width={192}
+                height={80}
+                className="h-14 w-48 object-contain"
+              />
             </div>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-ink/80">
               Equipping young people, especially young women in underserved

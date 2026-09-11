@@ -29,21 +29,19 @@ export default function NavBar() {
     <header
       className={`sticky top-0 z-50 border-b transition-all duration-300 ${
         scrolled
-          ? "border-ink/10 bg-white/95 shadow-[0_1px_0_0_rgba(0,0,0,0.1)] backdrop-blur"
-          : "border-transparent bg-white"
+          ? "border-white/15 bg-forest/95 shadow-[0_1px_0_0_rgba(0,0,0,0.1)] backdrop-blur"
+          : "border-transparent bg-forest"
       }`}
     >
       <div className="container-page flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5 group">
-          <span className="rounded-lg bg-forest px-2 py-1">
-            <Image
-              src="/img/logo/Circle_Group-removebg-preview.png"
-              alt="Circle Group"
-              width={192}
-              height={80}
-              className="h-14 w-48 object-contain"
-            />
-          </span>
+          <Image
+            src="/img/logo/Circle_Group-removebg-preview.png"
+            alt="Circle Group"
+            width={192}
+            height={80}
+            className="h-14 w-48 object-contain"
+          />
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex">
@@ -51,7 +49,7 @@ export default function NavBar() {
             <Link
               key={l.href}
               href={l.href}
-              className="eyebrow text-ink/75 transition-colors hover:text-forest"
+              className="eyebrow text-white/85 transition-colors hover:text-amber-light"
             >
               {l.label}
             </Link>
@@ -61,7 +59,7 @@ export default function NavBar() {
         <div className="hidden lg:block">
           <Link
             href="/get-involved"
-            className="rounded-full bg-leaf px-5 py-2.5 font-body text-sm font-semibold text-white transition-colors hover:bg-forest"
+            className="rounded-full bg-white px-5 py-2.5 font-body text-sm font-semibold text-forest transition-colors hover:bg-amber-light"
           >
             Partner With Us
           </Link>
@@ -74,17 +72,17 @@ export default function NavBar() {
           className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
         >
           <span
-            className={`h-[2px] w-6 bg-ink transition-transform ${
+            className={`h-[2px] w-6 bg-white transition-transform ${
               open ? "translate-y-2 rotate-45" : ""
             }`}
           />
           <span
-            className={`h-[2px] w-6 bg-ink transition-opacity ${
+            className={`h-[2px] w-6 bg-white transition-opacity ${
               open ? "opacity-0" : ""
             }`}
           />
           <span
-            className={`h-[2px] w-6 bg-ink transition-transform ${
+            className={`h-[2px] w-6 bg-white transition-transform ${
               open ? "-translate-y-2 -rotate-45" : ""
             }`}
           />
@@ -92,14 +90,14 @@ export default function NavBar() {
       </div>
 
       {open && (
-        <div className="border-t border-ink/10 bg-white lg:hidden">
+        <div className="border-t border-white/15 bg-forest lg:hidden">
           <nav className="container-page flex flex-col gap-1 py-4">
             {links.map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-              className="py-3 font-display text-xl text-ink"
+                className="py-3 font-display text-xl text-white"
               >
                 {l.label}
               </Link>
@@ -107,7 +105,7 @@ export default function NavBar() {
             <Link
               href="/get-involved"
               onClick={() => setOpen(false)}
-              className="mt-3 rounded-full bg-leaf px-5 py-3 text-center font-body text-sm font-semibold text-white"
+              className="mt-3 rounded-full bg-white px-5 py-3 text-center font-body text-sm font-semibold text-forest"
             >
               Partner With Us
             </Link>
