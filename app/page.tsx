@@ -111,7 +111,7 @@ export default function Home() {
           <Reveal delay={0.1} y={40} className="relative">
             <HeroCarousel />
 
-            <div className="absolute -bottom-8 -left-6 w-52 rounded-2xl border border-leaf/20 bg-white p-5 shadow-xl sm:-left-10">
+            <div className="relative mt-4 w-52 rounded-2xl border border-leaf/20 bg-white p-5 shadow-xl md:absolute md:bottom-4 md:-left-10 md:mt-0">
               <p className="font-display text-3xl text-leaf">2013</p>
               <p className="mt-1 text-xs leading-snug text-ink/70">
                 A women-led social enterprise creating opportunity since
