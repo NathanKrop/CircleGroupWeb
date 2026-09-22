@@ -2,18 +2,21 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
 const links = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/team", label: "Our Team" },
   { href: "/programs", label: "Our Work" },
   { href: "/partners", label: "Partners" },
+  { href: "/team", label: "Team" },
+  { href: "/work-with-us", label: "Work With Us" },
   { href: "/contact", label: "Contact" },
 ];
 
 export default function NavBar() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -23,6 +26,11 @@ export default function NavBar() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
 
   return (
     <header
@@ -44,15 +52,22 @@ export default function NavBar() {
         </Link>
 
         <nav className="hidden flex-1 items-center justify-center gap-7 lg:flex">
-          {links.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className="eyebrow text-white/85 transition-colors hover:text-amber-light"
-            >
-              {l.label}
-            </Link>
-          ))}
+          {links.map((l) => {
+            const active = isActive(l.href);
+            return (
+              <Link
+                key={l.href}
+                href={l.href}
+                className={`eyebrow transition-colors ${
+                  active
+                    ? "text-amber-light underline decoration-2 underline-offset-8"
+                    : "text-white/85 hover:text-amber-light"
+                }`}
+              >
+                {l.label}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="hidden lg:ml-auto lg:block">
@@ -91,16 +106,21 @@ export default function NavBar() {
       {open && (
         <div className="border-t border-white/15 bg-forest lg:hidden">
           <nav className="container-page flex flex-col gap-1 py-4">
-            {links.map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="py-3 font-display text-xl text-white"
-              >
-                {l.label}
-              </Link>
-            ))}
+            {links.map((l) => {
+              const active = isActive(l.href);
+              return (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  className={`py-3 font-display text-xl ${
+                    active ? "text-amber-light" : "text-white"
+                  }`}
+                >
+                  {l.label}
+                </Link>
+              );
+            })}
             <Link
               href="/work-with-us"
               onClick={() => setOpen(false)}

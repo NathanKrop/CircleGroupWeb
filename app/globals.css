@@ -21,6 +21,7 @@ html {
 body {
   background-color: #FFFFFF;
   color: #17170F;
+  -webkit-font-smoothing: antialiased;
 }
 
 .page-intro {
@@ -41,11 +42,28 @@ body {
 }
 
 .container-page {
-  max-width: 90rem;
+  max-width: 96rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+@media (min-width: 1280px) {
+  .container-page {
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+  }
+}
+
+input, textarea, select {
+  transition: border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #2E8B57;
+  box-shadow: 0 0 0 3px rgba(46, 139, 87, .12);
 }
 
 @media (min-width: 768px) {
