@@ -10,7 +10,6 @@ const links = [
   { href: "/team", label: "Our Team" },
   { href: "/programs", label: "Our Work" },
   { href: "/partners", label: "Partners" },
-  { href: "/stories", label: "Stories" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -33,18 +32,18 @@ export default function NavBar() {
           : "border-transparent bg-forest"
       }`}
     >
-      <div className="container-page flex h-20 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2.5 group">
+      <div className="container-page flex h-20 items-center gap-4 pl-0 pr-0">
+        <Link href="/" className="flex shrink-0 -ml-4 items-center group sm:-ml-5">
           <Image
             src="/img/logo/Circle_Group-removebg-preview.png"
             alt="Circle Group"
-            width={192}
-            height={80}
-            className="h-14 w-48 object-contain"
+            width={220}
+            height={88}
+            className="h-14 w-44 object-contain sm:h-15 sm:w-48 md:h-16 md:w-52"
           />
         </Link>
 
-        <nav className="hidden items-center gap-7 lg:flex">
+        <nav className="hidden flex-1 items-center justify-center gap-7 lg:flex">
           {links.map((l) => (
             <Link
               key={l.href}
@@ -56,9 +55,9 @@ export default function NavBar() {
           ))}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden lg:ml-auto lg:block">
           <Link
-            href="/get-involved"
+            href="/work-with-us"
             className="rounded-full bg-white px-5 py-2.5 font-body text-sm font-semibold text-forest transition-colors hover:bg-amber-light"
           >
             Partner With Us
@@ -103,7 +102,7 @@ export default function NavBar() {
               </Link>
             ))}
             <Link
-              href="/get-involved"
+              href="/work-with-us"
               onClick={() => setOpen(false)}
               className="mt-3 rounded-full bg-white px-5 py-3 text-center font-body text-sm font-semibold text-forest"
             >

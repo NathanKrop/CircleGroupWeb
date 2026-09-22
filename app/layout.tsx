@@ -1,86 +1,22 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter, IBM_Plex_Mono } from "next/font/google";
+import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  variable: "--font-fraunces",
-  axes: ["opsz", "SOFT", "WONK"],
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const plexMono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-mono",
-  display: "swap",
-});
+const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces", axes: ["opsz", "SOFT", "WONK"], display: "swap" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 
 export const metadata: Metadata = {
   title: "Circle Group | From Learning to Earning",
-  description:
-    "Circle Group equips young people — especially young women in underserved communities — with life skills, mentorship, and career pathways that turn potential into dignified work.",
-  metadataBase: new URL("https://circlegroup.co.ke"),
-  keywords: [
-    "youth skills development",
-    "career readiness Kenya",
-    "mentorship young women",
-    "life skills training",
-    "youth employment",
-    "social enterprise Kenya",
-  ],
-  openGraph: {
-    title: "Circle Group | From Learning to Earning",
-    description:
-      "Life skills, mentorship, and career pathways for young people across Kenya.",
-    url: "https://circlegroup.co.ke",
-    siteName: "Circle Group",
-    locale: "en_KE",
-    type: "website",
-    images: [
-      {
-        url: "/img/new/photo_50_2026-03-03_11-10-37.jpg",
-        width: 1200,
-        height: 1500,
-        alt: "Circle Group training session with young women",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Circle Group | From Learning to Earning",
-    description:
-      "Life skills, mentorship, and career pathways for young people across Kenya.",
-    images: ["/img/new/photo_50_2026-03-03_11-10-37.jpg"],
-  },
+  description: "Circle Group equips young people, especially young women in underserved communities, with life skills, career readiness and industry connections that turn potential into meaningful work.",
+  metadataBase: new URL("https://www.circlegroupke.org"),
+  alternates: { canonical: "./" },
+  keywords: ["youth skills development", "career readiness Kenya", "work readiness Kenya", "life skills training", "youth employment", "social enterprise Kenya"],
+  openGraph: { title: "Circle Group | From Learning to Earning", description: "Life skills, career readiness and pathways into work for young people across Kenya.", url: "https://www.circlegroupke.org", siteName: "Circle Group", locale: "en_KE", type: "website", images: [{ url: "/img/new/photo_50_2026-03-03_11-10-37.jpg", width: 1200, height: 1500, alt: "Circle Group training session with young women" }] },
+  twitter: { card: "summary_large_image", title: "Circle Group | From Learning to Earning", description: "Life skills, career readiness and pathways into work for young people across Kenya.", images: ["/img/new/photo_50_2026-03-03_11-10-37.jpg"] },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="en" className={`${fraunces.variable} ${inter.variable} ${plexMono.variable}`}>
-      <body className="font-body antialiased">
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:m-3 focus:rounded focus:bg-forest focus:px-4 focus:py-2 focus:text-white"
-        >
-          Skip to main content
-        </a>
-        <NavBar />
-        <main id="main-content">{children}</main>
-        <Footer />
-      </body>
-    </html>
-  );
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return <html lang="en" className={`${fraunces.variable} ${inter.variable}`}><body className="font-body antialiased"><a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:m-3 focus:rounded focus:bg-forest focus:px-4 focus:py-2 focus:text-white">Skip to main content</a><NavBar /><main id="main-content">{children}</main><Footer /></body></html>;
 }

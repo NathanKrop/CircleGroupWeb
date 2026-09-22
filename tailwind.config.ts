@@ -24,7 +24,6 @@ const config: Config = {
       fontFamily: {
         display: ["var(--font-fraunces)", "serif"],
         body: ["var(--font-inter)", "sans-serif"],
-        mono: ["var(--font-mono)", "monospace"],
       },
       backgroundImage: {
         "grain": "url('/grain.svg')",

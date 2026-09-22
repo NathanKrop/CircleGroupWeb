@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://circlegroup.co.ke";
+  const baseUrl = "https://www.circlegroupke.org";
 
   const staticRoutes = [
     "",
@@ -11,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/partners",
     "/research",
     "/stories",
-    "/get-involved",
+    "/work-with-us",
     "/contact",
     "/policies",
   ];
@@ -27,7 +27,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...[
       "life-skills-training",
       "career-readiness",
-      "mentorship",
       "entrepreneurship",
       "safeguarding",
       "school-institutional-training",

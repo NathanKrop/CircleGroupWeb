@@ -1,34 +1,3 @@
 import Link from "next/link";
-import Reveal from "@/components/Reveal";
-
-export default function About() {
-  return (
-    <>
-      <section className="bg-sand-light pb-20 pt-16 md:pt-24">
-        <div className="container-page max-w-4xl">
-          <Reveal>
-            <span className="eyebrow text-forest">About Circle Group</span>
-            <h1 className="mt-5 text-balance font-display text-5xl font-medium leading-[1.05] text-ink sm:text-6xl">Built on the belief that talent is everywhere. We exist to make sure opportunity is too.</h1>
-          </Reveal>
-          <Reveal delay={0.1}><p className="mt-8 max-w-2xl text-lg leading-relaxed text-ink/80">Circle Group creates practical pathways from education to meaningful work. We equip young people with life skills, professional knowledge, networks and career preparation, with a strong focus on young women.</p></Reveal>
-        </div>
-      </section>
-
-      <section className="bg-sand py-20">
-        <div className="container-page grid grid-cols-1 gap-10 md:grid-cols-3">
-          {[
-            { t: "Our story", d: "Founded in 2013 as a women-led social enterprise, Circle Group formalised its mission through Circle Group Foundation in 2025." },
-            { t: "Our focus", d: "We design every programme around the barriers young women in underserved communities face when moving into work." },
-            { t: "Our reach", d: "We work with schools, youth associations, employers, and development organisations to turn training into opportunity." },
-          ].map((block, i) => (
-            <Reveal key={block.t} delay={i * 0.1}><span className="font-mono text-xs text-leaf">0{i + 1}</span><h2 className="mt-3 font-display text-2xl text-leaf">{block.t}</h2><p className="mt-3 text-sm leading-relaxed text-ink/70">{block.d}</p></Reveal>
-          ))}
-        </div>
-      </section>
-
-      <section className="bg-sand py-24"><div className="container-page"><Reveal><span className="eyebrow text-leaf">The Circle Group approach</span><h2 className="mt-4 max-w-xl text-balance font-display text-4xl font-medium text-ink">Training, readiness, research, and partnerships work together.</h2><p className="mt-5 max-w-2xl text-ink/75">These aren&apos;t separate programmes. Research shows us where the gaps are; training and work readiness close them; partnerships turn preparation into employment. What we learn goes back into the next programme.</p></Reveal></div></section>
-
-      <section className="bg-sand-light py-24"><div className="container-page grid items-end gap-10 md:grid-cols-[1fr_auto]"><Reveal><span className="eyebrow text-leaf">Our people</span><h2 className="mt-4 max-w-xl font-display text-4xl font-medium text-ink">The people doing the work behind every opportunity.</h2></Reveal><Link href="/team" className="rounded-full border border-leaf px-6 py-3 text-center text-sm font-semibold text-leaf transition hover:border-forest hover:text-forest">Meet the team →</Link></div></section>
-    </>
-  );
-}
+const cards=[["Our story","Since 2013, Circle Group has been building pathways from education to work as a women-led social enterprise. In 2025 we also registered as a foundation, so today we can invest in young people directly as well as prepare them for the work ahead."],["Our focus","We design every program around the barriers young women in underserved communities face when moving into work."],["Our reach","We work with schools, youth associations, employers, and development organisations to turn training into opportunity."]];
+export default function About(){return <><section className="bg-sand-light pb-20 pt-16 md:pt-24"><div className="container-page max-w-4xl"><span className="eyebrow text-forest">About Circle Group</span><h1 className="mt-5 font-display text-5xl text-ink sm:text-6xl">Built on the belief that talent is everywhere. We exist to make sure opportunity is too.</h1><p className="mt-8 max-w-2xl text-lg text-ink/80">Circle Group creates practical pathways from education to meaningful work. We equip young people with life skills, professional knowledge, networks and career preparation, with a strong focus on young women.</p></div></section><section className="bg-sand py-20"><div className="container-page grid gap-10 md:grid-cols-3">{cards.map(([t,d],i)=><div key={t}><span className="text-xs font-semibold text-leaf">0{i+1}</span><h2 className="mt-3 font-display text-2xl text-leaf">{t}</h2><p className="mt-3 text-sm text-ink/70">{d}</p></div>)}</div></section><section className="bg-sand py-24"><div className="container-page"><span className="eyebrow text-leaf">The Circle Group approach</span><h2 className="mt-4 max-w-xl font-display text-4xl text-ink">Training, readiness, research, and partnerships work together.</h2><p className="mt-5 max-w-2xl text-ink/75">These aren’t separate programs. Research shows us where the gaps are; training and work readiness close them; partnerships turn preparation into employment. What we learn goes back into the next program.</p></div></section><section className="bg-forest py-20 text-white"><div className="container-page max-w-4xl"><h2 className="font-display text-4xl">Trust comes first.</h2><p className="mt-5 text-white/85">Every young person who walks through our doors is someone’s daughter, someone’s responsibility, before she is ever a participant. That shapes how we design everything we do: trained staff at every touchpoint, clear boundaries in every relationship, and a standing commitment that no young person’s safety is ever the price of a good outcome. Safeguarding is the first thing we build and the thing we protect hardest.</p><Link href="/policies#safeguarding" className="mt-6 inline-block text-amber">Read our safeguarding policy →</Link></div></section><section className="bg-sand-light py-24"><div className="container-page"><span className="eyebrow text-leaf">Our people</span><h2 className="mt-4 font-display text-4xl text-ink">The people doing the work behind every opportunity.</h2><Link href="/team" className="mt-6 inline-block rounded-full border border-leaf px-6 py-3 text-sm text-leaf">Meet the team →</Link><p className="mt-5 text-sm text-ink/70">Want to join us? <Link href="/work-with-us#careers" className="text-leaf underline">See open roles →</Link></p></div></section></>}

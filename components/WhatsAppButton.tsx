@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const WHATSAPP_MESSAGE = "Hello Circle Group! I'd like to learn more about your programmes.";
+const WHATSAPP_MESSAGE = "Hello Circle Group! I'd like to learn more about your programs.";
 
 export default function WhatsAppButton() {
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;

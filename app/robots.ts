@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/admin"],
     },
-    sitemap: "https://circlegroup.co.ke/sitemap.xml",
+    sitemap: "https://www.circlegroupke.org/sitemap.xml",
   };
 }

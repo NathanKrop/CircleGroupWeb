@@ -1,69 +1,7 @@
 "use client";
-
 import { useState } from "react";
-
 export default function NewsletterSignup() {
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "submitting" | "sent" | "error">("idle");
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("submitting");
-
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ formType: "newsletter", email }),
-      });
-
-      if (!res.ok) throw new Error("Subscription failed");
-
-      setStatus("sent");
-      setEmail("");
-    } catch (err) {
-      console.error("Newsletter error:", err);
-      setStatus("error");
-    }
-  };
-
-  return (
-    <div>
-      <h3 className="eyebrow text-forest">Stay in touch</h3>
-      <p className="mt-4 text-sm text-ink/80">
-        Monthly updates on our programmes, research, and impact stories.
-      </p>
-
-      {status === "sent" ? (
-        <p className="mt-5 text-sm text-forest">
-          Thanks for subscribing — we&rsquo;ll be in touch.
-        </p>
-      ) : (
-        <form onSubmit={handleSubmit} className="mt-5 flex gap-2">
-          <input
-            type="email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="you@example.com"
-            aria-label="Email address"
-            className="w-full rounded-full border border-ink/20 bg-white px-4 py-2.5 text-sm text-ink placeholder:text-ink/40 focus:border-leaf focus:outline-none"
-          />
-          <button
-            type="submit"
-            disabled={status === "submitting"}
-            className="shrink-0 rounded-full bg-leaf px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-forest disabled:opacity-60"
-          >
-            {status === "submitting" ? "..." : "Sign up"}
-          </button>
-        </form>
-      )}
-
-      {status === "error" && (
-        <p className="mt-3 text-xs text-leaf">
-          Something went wrong. Please try again.
-        </p>
-      )}
-    </div>
-  );
+  const [email, setEmail] = useState(""); const [county, setCounty] = useState(""); const [status, setStatus] = useState("idle");
+  async function submit(e: React.FormEvent) { e.preventDefault(); setStatus("sending"); try { const res = await fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ formType: "newsletter", email, message: `County: ${county}` }) }); if (!res.ok) throw new Error(); setStatus("sent"); } catch { setStatus("error"); } }
+  return <section id="opportunities" className="border-b border-white/15 bg-leaf"><div className="container-page py-10"><div className="grid gap-5 md:grid-cols-[1fr_1.2fr] md:items-end"><div><h2 className="font-display text-2xl text-white">Hear about opportunities first.</h2><p className="mt-2 text-sm text-white/80">Leave your email and we’ll let you know when new training and work opportunities open.</p></div>{status === "sent" ? <p className="text-sm text-white">Thanks. We’ll keep you posted.</p> : <form onSubmit={submit} className="grid gap-3 sm:grid-cols-3"><input required type="email" aria-label="Email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} className="rounded-full px-4 py-3 text-sm text-ink" /><input required aria-label="County" placeholder="County" value={county} onChange={(e) => setCounty(e.target.value)} className="rounded-full px-4 py-3 text-sm text-ink" /><button className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-forest">{status === "sending" ? "Sending..." : "Keep me posted"}</button></form>}{status === "error" && <p className="text-sm text-white">Please try again.</p>}</div></div></section>;
 }

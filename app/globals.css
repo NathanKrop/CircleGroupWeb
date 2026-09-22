@@ -33,11 +33,11 @@ body {
 }
 
 .eyebrow {
-  font-family: var(--font-mono);
-  letter-spacing: 0.18em;
+  font-family: var(--font-inter), sans-serif;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   font-size: 0.72rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .container-page {

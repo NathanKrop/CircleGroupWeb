@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const stages = [
   { n: "01", label: "Learn", desc: "Life skills & digital literacy" },
   { n: "02", label: "Train", desc: "Career readiness & vocational skills" },
-  { n: "03", label: "Mentor", desc: "1:1 mentorship & networks" },
+  { n: "03", label: "Connect", desc: "Work placements & industry networks" },
   { n: "04", label: "Earn", desc: "Employment & entrepreneurship" },
 ];
 
@@ -47,7 +47,7 @@ export default function Pathway() {
             }}
           >
             <div
-              className="flex h-14 w-14 items-center justify-center rounded-full border-2 font-mono text-sm font-semibold"
+              className="flex h-14 w-14 items-center justify-center rounded-full border-2 text-sm font-semibold"
               style={{
                 borderColor: "#A8D038",
                 color: "#2E8B57",

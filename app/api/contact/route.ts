@@ -10,7 +10,7 @@ const contactEmail = process.env.CONTACT_EMAIL || "info@circlegroup.co.ke";
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { formType, name, org, email, phone, message } = body;
+    const { formType, name, org, sector, interest, email, phone, message } = body;
 
     if (!email) {
       return NextResponse.json({ error: "Email is required" }, { status: 400 });
@@ -27,7 +27,7 @@ export async function POST(request: Request) {
           org: org || null,
           email,
           phone: phone || null,
-          message: message || null,
+          message: [interest && `Interest: ${interest}`, sector && `Industry/Sector: ${sector}`, message].filter(Boolean).join("\n") || null,
         },
       ])
       .select()
@@ -47,8 +47,8 @@ export async function POST(request: Request) {
       const formLabels: Record<string, string> = {
         contact: "Contact Form",
         partner: "Partnership Enquiry",
-        mentor: "Mentor Application",
-        apply: "Programme Application",
+        industry: "Industry Partnership Enquiry",
+        funding: "Funding Enquiry",
         newsletter: "Newsletter Signup",
       };
 
