@@ -83,7 +83,7 @@ export default function NavBar() {
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
+          className="ml-auto flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
         >
           <span
             className={`h-[2px] w-6 bg-white transition-transform ${
