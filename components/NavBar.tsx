@@ -10,7 +10,6 @@ const links = [
   { href: "/about", label: "About" },
   { href: "/programs", label: "Our Work" },
   { href: "/partners", label: "Partners" },
-  { href: "/team", label: "Team" },
   { href: "/work-with-us", label: "Work With Us" },
   { href: "/contact", label: "Contact" },
 ];
@@ -41,7 +40,7 @@ export default function NavBar() {
       }`}
     >
       <div className="container-page flex h-20 items-center gap-4 pl-0 pr-0">
-        <Link href="/" className="flex shrink-0 -ml-4 items-center group sm:-ml-5">
+        <Link href="/" className="group -ml-5 flex shrink-0 items-center md:-ml-11 xl:-ml-16">
           <Image
             src="/img/logo/Circle_Group-removebg-preview.png"
             alt="Circle Group"
