@@ -40,7 +40,7 @@ export default function NavBar() {
       }`}
     >
       <div className="container-page flex h-20 items-center gap-4 pl-0 pr-0">
-        <Link href="/" className="group -ml-5 flex shrink-0 items-center md:-ml-11 xl:-ml-16">
+        <Link href="/" className="group -ml-10 flex shrink-0 items-center md:-ml-16 xl:-ml-24">
           <Image
             src="/img/logo/Circle_Group-removebg-preview.png"
             alt="Circle Group"

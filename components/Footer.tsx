@@ -30,7 +30,7 @@ export default function Footer() {
       <div className="container-page py-16">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.3fr_1fr_1fr_1.1fr]">
           <div>
-            <Image src="/img/logo/Circle_Group-removebg-preview.png" alt="Circle Group" width={192} height={80} className="-ml-5 h-14 w-48 object-contain md:-ml-11 xl:-ml-16" />
+            <Image src="/img/logo/Circle_Group-removebg-preview.png" alt="Circle Group" width={192} height={80} className="-ml-10 h-14 w-48 object-contain md:-ml-16 xl:-ml-24" />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/80">Equipping young people, especially young women in underserved communities, with the skills, readiness and connections to build meaningful work.</p>
           </div>
           <div>
