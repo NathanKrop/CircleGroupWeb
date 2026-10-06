@@ -42,7 +42,7 @@ export default function TeamSection() {
             </Reveal>
           ))}
           <Reveal delay={0.3} y={18} className="border-b border-ink/15">
-            <Link href="/contact" className="flex aspect-[4/5] flex-col justify-end bg-amber p-7 text-ink transition hover:bg-leaf hover:text-white">
+            <Link href="#contact" className="flex aspect-[4/5] flex-col justify-end bg-amber p-7 text-ink transition hover:bg-leaf hover:text-white">
               <span className="eyebrow">Work with us</span>
               <span className="mt-3 font-display text-3xl leading-tight">Want to build a pathway together?</span>
               <span className="mt-6 text-sm font-semibold">Get in touch →</span>

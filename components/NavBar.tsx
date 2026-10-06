@@ -6,12 +6,12 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
 const links = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/programs", label: "Our Work" },
-  { href: "/partners", label: "Partners" },
-  { href: "/work-with-us", label: "Work With Us" },
-  { href: "/contact", label: "Contact" },
+  { href: "#about", label: "About" },
+  { href: "#our-work", label: "Our Work" },
+  { href: "#partners", label: "Partners" },
+  { href: "#team", label: "Our Team" },
+  { href: "#work-with-us", label: "Work With Us" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export default function NavBar() {
@@ -40,7 +40,7 @@ export default function NavBar() {
       }`}
     >
       <div className="container-page flex h-20 items-center gap-4 pl-0 pr-0">
-        <Link href="/" className="group -ml-10 flex shrink-0 items-center md:-ml-16 xl:-ml-24">
+        <Link href="#top" className="group -ml-10 flex shrink-0 items-center md:-ml-16 xl:-ml-24">
           <Image
             src="/img/logo/Circle_Group-removebg-preview.png"
             alt="Circle Group"
@@ -71,7 +71,7 @@ export default function NavBar() {
 
         <div className="hidden lg:ml-auto lg:block">
           <Link
-            href="/work-with-us"
+            href="#work-with-us"
             className="rounded-full bg-white px-5 py-2.5 font-body text-sm font-semibold text-forest transition-colors hover:bg-amber-light"
           >
             Partner With Us
@@ -121,7 +121,7 @@ export default function NavBar() {
               );
             })}
             <Link
-              href="/work-with-us"
+              href="#work-with-us"
               onClick={() => setOpen(false)}
               className="mt-3 rounded-full bg-white px-5 py-3 text-center font-body text-sm font-semibold text-forest"
             >

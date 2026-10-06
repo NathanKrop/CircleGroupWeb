@@ -36,22 +36,22 @@ export default function Footer() {
           <div>
             <h3 className="eyebrow text-white/80">Explore</h3>
             <ul className="mt-5 space-y-3 text-sm text-white/85">
-              <li><Link href="/about">About Us</Link></li>
-              <li><Link href="/about#team">Our Team</Link></li>
-              <li><Link href="/programs">Our Work</Link></li>
-              <li><Link href="/partners">Partners</Link></li>
-              <li><Link href="/work-with-us">Work With Us</Link></li>
-              <li><Link href="/contact">Contact</Link></li>
+              <li><Link href="#about">About Us</Link></li>
+              <li><Link href="#team">Our Team</Link></li>
+              <li><Link href="#our-work">Our Work</Link></li>
+              <li><Link href="#partners">Partners</Link></li>
+              <li><Link href="#work-with-us">Work With Us</Link></li>
+              <li><Link href="#contact">Contact</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="eyebrow text-white/80">Take Action</h3>
             <ul className="mt-5 space-y-3 text-sm text-white/85">
-              <li><Link href="/work-with-us">Partner With Us</Link></li>
-              <li><Link href="/work-with-us#fund">Invest in Young People</Link></li>
-              <li><Link href="/work-with-us#industry-partner">Become an Industry Partner</Link></li>
-              <li><Link href="/work-with-us#careers">Careers</Link></li>
-              <li><Link href="/policies">Safeguarding &amp; Privacy</Link></li>
+              <li><Link href="#work-with-us">Partner With Us</Link></li>
+              <li><Link href="#work-with-us">Invest in Young People</Link></li>
+              <li><Link href="#partners">Become an Industry Partner</Link></li>
+              <li><Link href="#team">Careers</Link></li>
+              <li><a href="mailto:info@circlegroup.co.ke?subject=Safeguarding%20and%20privacy">Safeguarding &amp; Privacy</a></li>
             </ul>
           </div>
           <div>

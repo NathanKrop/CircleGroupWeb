@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.circlegroupke.org"),
   alternates: { canonical: "./" },
   keywords: ["youth skills development", "career readiness Kenya", "work readiness Kenya", "life skills training", "youth employment", "social enterprise Kenya"],
-  openGraph: { title: "Circle Group | From Learning to Earning", description: "Life skills, career readiness and pathways into work for young people across Kenya.", url: "https://www.circlegroupke.org", siteName: "Circle Group", locale: "en_KE", type: "website", images: [{ url: "/img/new/photo_50_2026-03-03_11-10-37.jpg", width: 1200, height: 1500, alt: "Circle Group training session with young women" }] },
-  twitter: { card: "summary_large_image", title: "Circle Group | From Learning to Earning", description: "Life skills, career readiness and pathways into work for young people across Kenya.", images: ["/img/new/photo_50_2026-03-03_11-10-37.jpg"] },
+  openGraph: { title: "Circle Group | From Learning to Earning", description: "Life skills, career readiness and pathways into work for young people across Kenya.", url: "https://www.circlegroupke.org", siteName: "Circle Group", locale: "en_KE", type: "website", images: [{ url: "/img/pixx/photo_2026-10-06_13-46-17.jpg", width: 1200, height: 1500, alt: "Circle Group community opportunity" }] },
+  twitter: { card: "summary_large_image", title: "Circle Group | From Learning to Earning", description: "Life skills, career readiness and pathways into work for young people across Kenya.", images: ["/img/pixx/photo_2026-10-06_13-46-17.jpg"] },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
