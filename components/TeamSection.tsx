@@ -4,12 +4,10 @@ import Reveal from "@/components/Reveal";
 
 const team = [
   { name: "Rose Njenga", title: "Executive Director, Circle Group", image: "/img/Team/Rose, Executive Director, Circle Group.jpg" },
-  { name: "Miriam Wambui", title: "Digital Communications Specialist", image: "/img/Team/Miriam Wambui. Digital Communications Specialist.jpg" },
-  { name: "Monica Adobo", title: "Psychologist", image: "/img/Team/Monica Adobo. Psychologist.jpg" },
-  { name: "Norah Ntarangwi", title: "Finance Officer", image: "/img/Team/Norah Ntarangwi- Finance Officer.jpg" },
-  { name: "Jane Oduka", title: "Team member", image: "/img/Team/Jane Oduka, N.A.jpg" },
-  { name: "Serah Chepkirui", title: "Safeguarding Assistant", image: "/img/Team/Serah Chepkirui - Safeguarding Assistant.jpg" },
-  { name: "Sharon Juma", title: "HT & Payroll Officer", image: "/img/Team/Sharon Juma. HT & Payroll Officer.jpg" },
+  { name: "Asmahan Pogal", title: "Mentoring Program Manager", image: "/img/Team/Asmahan Pogal - Mentoring Program Manager.jpg" },
+  { name: "Lidemta Ireri", title: "Journalizing and MERL Manager", image: "/img/Team/Lidemta Ireri - Journalizing and MERL Manager.jpg" },
+  { name: "Naom Oganga", title: "HR Manager", image: "/img/Team/Naom Oganga - HR Manager.jpg" },
+  { name: "Stellah Serem", title: "Program Manager", image: "/img/Team/Stellah Serem - Program Manager.jpg" },
 ];
 
 export default function TeamSection() {

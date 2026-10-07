@@ -2,11 +2,12 @@ import Link from "next/link";
 import CirclePhotoCarousel from "@/components/CirclePhotoCarousel";
 
 const segments = [
-  ["Funders & Donors", "Invest directly in young people's path to work, with reporting that shows what your support made possible.", "Explore ways to invest ->", "/work-with-us#fund"],
-  ["Schools & Institutions", "Bring life skills, career readiness, and safeguarding training directly to your students and staff.", "Bring training to your school ->", "/work-with-us#training"],
-  ["Industry Partners", "Hire from a pipeline of trained, workplace-ready young people, and help shape the training that prepares them.", "Become an industry partner ->", "/work-with-us#industry-partner"],
-  ["Development Organisations", "Co-design programs, contribute to research, and extend your youth-employment strategy through our community reach.", "Explore a partnership ->", "/work-with-us#programs"],
-  ["Communities", "Local leaders, parents, and community groups shape how our programs actually work on the ground.", "Get involved locally ->", "/work-with-us"],
+  ["Training institutions", "We work with Maasai National Polytechnic and other TVETs to connect young women with technical training and retention support.", "Explore a partnership ->", "/work-with-us#training"],
+  ["Grassroots partners", "HELGA and Perur Rays of Hope help connect programmes with community knowledge and relationships.", "Partner on a programme ->", "/work-with-us#programs"],
+  ["Programme partners", "Global Give Back Circle through HER Lab supports young women's pathways and opportunities.", "Explore a partnership ->", "/work-with-us#programs"],
+  ["Disability inclusion", "AIC Kajiado Child Care Centre is a partner in practical disability inclusion.", "Talk with our team ->", "/work-with-us#partner-form"],
+  ["Employers & industry", "A network of 100+ partners creates internships, workplace experience, mentorship, employment and market opportunities.", "Become an industry partner ->", "/work-with-us#industry-partner"],
+  ["Funders & government", "Foundations, development organisations, county governments and business networks can help strengthen the pathway from education to work.", "Start a conversation ->", "/work-with-us#fund"],
 ];
 
 const photos = [

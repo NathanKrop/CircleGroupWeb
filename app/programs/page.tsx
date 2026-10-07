@@ -21,7 +21,7 @@ export default function Programs() {
     <>
       <section className="bg-sand-light pb-16 pt-16 md:pt-24">
         <div className="container-page grid max-w-5xl items-center gap-14 md:grid-cols-2">
-          <div><span className="eyebrow text-forest">Our Work</span><h1 className="mt-5 font-display text-5xl text-ink sm:text-6xl">Everything it takes to move from learning to earning.</h1><p className="mt-7 text-lg text-ink/80">We train young people, prepare them for the workplace, connect them to industry partners, and build the research that keeps our work sharp. Funders, schools, employers and organisations can bring us in at any point along the way.</p></div>
+          <div><span className="eyebrow text-forest">Our Work</span><h1 className="mt-5 font-display text-5xl text-ink sm:text-6xl">Pathways from capability to sustainable income.</h1><p className="mt-7 text-lg text-ink/80">We work with young women at different starting points. Support can include TVET access and retention, career preparation and employer connections, or the business support, capital and markets needed to grow an enterprise. Partners can join us at any point along the pathway.</p></div>
           <CirclePhotoCarousel frame="ribbon" photos={photos} />
         </div>
       </section>
