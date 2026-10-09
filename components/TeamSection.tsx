@@ -8,11 +8,11 @@ const team = [
     title: "Executive Director, Circle Group",
     image: "/img/Team/Rose, Executive Director, Circle Group.jpg",
     members: [
-      { name: "Marcy Arita", title: "University Scholarships Officer" },
+      { name: "Mercy Arita", title: "University Scholarships Officer" },
       { name: "Amina Mohamed", title: "Partnerships Officer" },
-      { name: "ODUKA ODUKA", title: "Assistant - Scholarships, Intern" },
+      { name: "Oduka Jane", title: "Assistant-Scholarships, Internships and Career Transitions Officer" },
       { name: "Prudence Olesha", title: "Internship & Job Placement Officer" },
-      { name: "Leah Wamweru", title: "Budgeting and payment office" },
+      { name: "Leah Wamweru", title: "Budgeting and payment officer" },
     ],
   },
   {
@@ -32,7 +32,7 @@ const team = [
     image: "/img/Team/Lidemta Ireri - Journalizing and MERL Manager.jpg",
     members: [
       { name: "Pauline Anyona", title: "MERL Officer" },
-      { name: "Kelito Kelito", title: "Qualitative Coding Analyst" },
+      { name: "Margaret Kelito", title: "Qualitative Coding Analyst" },
       { name: "Makena Njogu", title: "Qualitative Coding Analyst" },
       { name: "Lilian Nyabicha", title: "Qualitative Coding Analyst" },
       { name: "Josephine Ogaja", title: "Qualitative Coding Analyst" },
@@ -58,6 +58,16 @@ const team = [
       { name: "Mumbi Wachira", title: "Mentoring Program Officer" },
     ],
   },
+  {
+    name: "FINANCE TEAM",
+    title: "Finance Department",
+    members: [
+      { name: "Cynthia Kembene", title: "Finance Manager" },
+      { name: "Wendy Anyango", title: "Finance Assistant (Reporting)" },
+      { name: "Fiona Nkonge", title: "Procurement Officer" },
+      { name: "Norah Ntarangwi", title: "Finance Officer" },
+    ],
+  },
 ];
 
 export default function TeamSection() {
@@ -80,8 +90,8 @@ export default function TeamSection() {
             <Reveal key={member.name} delay={i * 0.06} y={18} className="border-b border-ink/15 sm:[&:nth-child(odd)]:border-r lg:[&:nth-child(3n+1)]:border-r lg:[&:nth-child(3n+2)]:border-r">
               <details className="group/manager bg-white">
                 <summary className="list-none cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-amber [&::-webkit-details-marker]:hidden">
-                  <article className="group relative aspect-[4/5] overflow-hidden bg-white">
-                    <Image src={member.image} alt={`Portrait of ${member.name}`} fill sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw" className="object-cover saturate-[.8] transition duration-700 group-hover:scale-105 group-hover:saturate-100 group-open/manager:scale-105 group-open/manager:blur-sm" />
+                  <article className={`group relative aspect-[4/5] overflow-hidden ${member.image ? "bg-white" : "bg-forest"}`}>
+                    {member.image && <Image src={member.image} alt={`Portrait of ${member.name}`} fill sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw" className="object-cover saturate-[.8] transition duration-700 group-hover:scale-105 group-hover:saturate-100 group-open/manager:scale-105 group-open/manager:blur-sm" />}
                     <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/15 to-transparent" />
                     <div className="absolute inset-0 bg-ink/75 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-open/manager:opacity-100" />
                     <div className="absolute inset-x-0 bottom-0 p-7 transition-opacity duration-200 group-open/manager:opacity-0">
@@ -97,11 +107,11 @@ export default function TeamSection() {
                       <div className="flex items-end justify-between gap-3 border-b border-white/30 pb-3">
                         <div>
                           <span className="eyebrow text-amber">Department roster</span>
-                          <h3 className="mt-1 font-display text-2xl leading-tight text-white">{member.name.split(" ")[0]}&apos;s team</h3>
+                          <h3 className="mt-1 font-display text-2xl leading-tight text-white">{member.image ? `${member.name.split(" ")[0]}'s team` : member.name}</h3>
                         </div>
                         <span className="shrink-0 pb-0.5 text-xs text-white/75">{member.members.length} people</span>
                       </div>
-                      <ul aria-label={`Team members reporting to ${member.name}`} className="grid flex-1 grid-cols-2 content-center gap-x-4 gap-y-3 py-4">
+                      <ul aria-label={member.image ? `Team members reporting to ${member.name}` : `Members of ${member.name}`} className="grid flex-1 grid-cols-2 content-center gap-x-4 gap-y-3 py-4">
                         {member.members.map((teamMember, index) => (
                           <li key={teamMember.name} className="min-w-0 border-l-2 border-amber/80 pl-2">
                             <p className="text-sm font-semibold leading-tight text-white">{teamMember.name}</p>

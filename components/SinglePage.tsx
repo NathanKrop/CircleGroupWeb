@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import TeamSection from "@/components/TeamSection";
+import PartnerLogos from "@/components/PartnerLogos";
 
 const pathways = [
   ["Skills & education", "TVET access, scholarships, life skills, mentorship and retention support."],
@@ -58,6 +59,7 @@ export default function SinglePage() {
     <TeamSection />
 
     <section id="work-with-us" className="scroll-mt-24 bg-forest py-20 text-white md:py-28"><div className="container-page grid gap-12 lg:grid-cols-[.85fr_1.15fr]"><div><span className="eyebrow text-amber">Work with us</span><h2 className="mt-4 font-display text-4xl leading-tight sm:text-5xl">Help build pathways to sustainable livelihoods.</h2><p className="mt-6 text-lg leading-relaxed text-white/75">We partner with TVETs, foundations, development organisations, government, employers and community organisations to design and deliver livelihood, skilling, entrepreneurship and transition-to-work programmes for young women.</p><p className="mt-6 font-semibold text-amber">Partner with us · Fund our work · Hire our talent · Open markets for young women</p></div><div className="rounded-[2rem] bg-white p-7 text-ink shadow-soft sm:p-10"><p className="eyebrow text-leaf">Start a conversation</p><h3 className="mt-3 font-display text-3xl">Tell us how you would like to work together.</h3><div className="mt-8"><ContactForm formType="partner" fields={["name", "org", "email", "phone", "interest", "message"]} submitLabel="Send enquiry" /></div></div></div></section>
+    <PartnerLogos />
     <section className="bg-leaf py-8 text-white"><div className="container-page text-center"><p className="font-display text-xl">Circle Group Limited — Building pathways from capability to sustainable livelihoods.</p></div></section>
   </>;
 }
