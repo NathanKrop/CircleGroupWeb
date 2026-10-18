@@ -22,7 +22,27 @@ export default function Contact() {
         </div>
         <div className="relative isolate grid overflow-hidden rounded-[2rem] bg-forest shadow-2xl lg:grid-cols-[.68fr_1fr]">
           <div className="relative min-h-64 lg:min-h-full"><Image src="/img/lux/pexels-lagosfoodbank-6472487.jpg" alt="Circle Group team member supporting a community session" fill className="object-cover grayscale" /><div className="absolute inset-0 bg-forest/35" /><p className="absolute bottom-7 left-7 right-7 font-display text-3xl leading-tight text-white">A conversation can be the start of a new pathway.</p></div>
-          <div className="bg-[#f4f1e9] p-7 sm:p-10"><span className="eyebrow text-leaf">Send an enquiry</span><h2 className="mt-3 font-display text-3xl text-ink">How can we help?</h2><div className="mt-7"><ContactForm fields={["name", "org", "email", "phone", "message"]} submitLabel="Send enquiry" /></div></div>
+          <div className="bg-white p-7 sm:p-10"><span className="eyebrow text-leaf">Send an enquiry</span><h2 className="mt-3 font-display text-3xl text-ink">How can we help?</h2><div className="mt-7"><ContactForm fields={["name", "org", "email", "phone", "message"]} submitLabel="Send enquiry" /></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section className="bg-sand py-16 md:py-20">
+      <div className="container-page">
+        <div className="mb-8">
+          <span className="eyebrow text-forest">Our location</span>
+          <h2 className="mt-3 font-display text-4xl leading-tight text-ink sm:text-5xl">Based in Kenya, working with communities across the country.</h2>
+        </div>
+        <div className="overflow-hidden rounded-[2rem] border border-ink/10 bg-white shadow-soft">
+          <div className="relative h-[420px] w-full">
+            <iframe
+              title="Map showing Nairobi, Kenya"
+              src="https://www.google.com/maps?q=Nairobi%20Kenya&z=6&output=embed"
+              className="h-full w-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
         </div>
       </div>
     </section>

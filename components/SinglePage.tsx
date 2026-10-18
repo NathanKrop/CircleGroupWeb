@@ -21,11 +21,11 @@ const impact = [
 ];
 
 const partners = [
-  ["Training institutions", "Maasai National Polytechnic and other training institutions"],
-  ["Grassroots organisations", "HELGA and Perur Rays of Hope"],
-  ["Programme partners", "Global Give Back Circle through HER Lab"],
-  ["Disability inclusion", "AIC Kajiado Child Care Centre"],
-  ["Employers and industry", "A network of more than 100 partners creating internships, employment, mentorship and market opportunities"],
+  "Training institutions",
+  "Grassroots organisations",
+  "Programme partners",
+  "Disability inclusion",
+  "Employers and industry",
 ];
 
 export default function SinglePage() {
@@ -52,7 +52,7 @@ export default function SinglePage() {
 
     <section className="bg-sand-light py-20 md:py-28"><div className="container-page grid gap-12 lg:grid-cols-[.75fr_1.25fr]"><div><span className="eyebrow text-leaf">Where we work</span><h2 className="mt-4 font-display text-4xl leading-tight text-ink sm:text-5xl">Rooted in communities. Connected across Kenya.</h2></div><div><p className="text-lg leading-relaxed text-ink/75">Our direct work is concentrated in Kajiado and West Pokot, reaching young women from rural and underserved communities, including participants from Turkana, Baringo, Samburu, Taita Taveta and Makueni.</p><p className="mt-5 text-lg leading-relaxed text-ink/75">We work through existing TVETs, grassroots organisations, communities and employers rather than creating parallel systems.</p></div></div></section>
 
-    <section id="partners" className="scroll-mt-24 bg-sand py-20 md:py-28"><div className="container-page grid gap-12 lg:grid-cols-[.75fr_1.25fr]"><div><span className="eyebrow text-forest">Partnerships</span><h2 className="mt-4 font-display text-4xl leading-tight text-ink sm:text-5xl">The pathway is built together.</h2><p className="mt-5 leading-relaxed text-ink/70">Our partners help make education, work experience, enterprise and inclusion support possible.</p><Link href="/partners" className="mt-7 inline-block border-b-2 border-leaf pb-1 text-sm font-bold text-leaf">Meet our partners →</Link></div><div className="grid gap-3">{partners.map(([title, description]) => <article key={title} className="grid gap-2 rounded-2xl border border-ink/10 bg-sand-light p-5 sm:grid-cols-[180px_1fr]"><h3 className="font-semibold text-forest">{title}</h3><p className="text-sm leading-relaxed text-ink/70">{description}</p></article>)}</div></div></section>
+    <section id="partners" className="scroll-mt-24 bg-sand py-20 md:py-28"><div className="container-page grid gap-12 lg:grid-cols-[.75fr_1.25fr]"><div><span className="eyebrow text-forest">Partnerships</span><h2 className="mt-4 font-display text-4xl leading-tight text-ink sm:text-5xl">The pathway is built together.</h2><p className="mt-5 leading-relaxed text-ink/70">Our partners help make education, work experience, enterprise and inclusion support possible.</p><Link href="/partners" className="mt-7 inline-block border-b-2 border-leaf pb-1 text-sm font-bold text-leaf">Meet our partners →</Link></div><div className="grid gap-3">{partners.map((title) => <article key={title} className="rounded-2xl border border-ink/10 bg-sand-light p-5"><h3 className="font-semibold text-forest">{title}</h3></article>)}</div></div></section>
 
     <section className="bg-[#e5efd0] py-20 md:py-28"><div className="container-page grid gap-10 lg:grid-cols-[.7fr_1.3fr]"><span className="eyebrow pt-2 text-forest">What we have learned</span><div><h2 className="font-display text-4xl leading-tight text-ink sm:text-5xl">The challenge is not simply lack of skills. It is lack of an accessible pathway from capability to income.</h2><p className="mt-6 text-lg leading-relaxed text-ink/75">A certificate does not automatically create a job. Business training does not automatically create a customer. Capital does not automatically create a viable enterprise. So we start with a different question:</p><p className="mt-5 font-display text-3xl text-forest">What stands between this young woman and sustainable income?</p><p className="mt-5 font-semibold text-leaf">The pathway adapts to the woman—not the woman to the programme.</p></div></div></section>
 

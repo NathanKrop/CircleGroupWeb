@@ -16,7 +16,7 @@ const config: Config = {
           dark: "#8AB030",
         },
         sand: {
-          DEFAULT: "#F7F5EE",
+          DEFAULT: "#FFFFFF",
           light: "#FFFFFF",
         },
         ink: "#17170F",

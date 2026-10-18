@@ -25,7 +25,7 @@ body {
 }
 
 .page-intro {
-  background: radial-gradient(circle at 86% 12%, rgba(46, 139, 87, .1), transparent 25rem), #F7F5EE;
+  background: radial-gradient(circle at 86% 12%, rgba(168, 208, 56, .18), transparent 25rem), #FFFFFF;
 }
 
 ::selection {
