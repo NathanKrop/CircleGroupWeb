@@ -8,13 +8,13 @@ const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces", axe
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Circle Group | Pathways to Sustainable Livelihoods",
+  title: "Circle Group | Bringing Opportunity Closer to Young Women",
   description: "Circle Group is a women-led Kenyan social enterprise building pathways to dignified work and sustainable livelihoods for young women.",
   metadataBase: new URL("https://www.circlegroupke.org"),
   alternates: { canonical: "./" },
   keywords: ["young women employment Kenya", "TVET access Kenya", "women entrepreneurship Kenya", "livelihoods", "social enterprise Kenya"],
-  openGraph: { title: "Circle Group | Pathways to Sustainable Livelihoods", description: "A women-led Kenyan social enterprise building pathways to dignified work and sustainable livelihoods for young women.", url: "https://www.circlegroupke.org", siteName: "Circle Group", locale: "en_KE", type: "website", images: [{ url: "/img/pixx/photo_2026-10-06_13-46-17.jpg", width: 1200, height: 1500, alt: "Circle Group community opportunity" }] },
-  twitter: { card: "summary_large_image", title: "Circle Group | Pathways to Sustainable Livelihoods", description: "A women-led Kenyan social enterprise building pathways to dignified work and sustainable livelihoods for young women.", images: ["/img/pixx/photo_2026-10-06_13-46-17.jpg"] },
+  openGraph: { title: "Circle Group | Bringing Opportunity Closer to Young Women", description: "A women-led Kenyan social enterprise building pathways to dignified work and sustainable livelihoods for young women.", url: "https://www.circlegroupke.org", siteName: "Circle Group", locale: "en_KE", type: "website", images: [{ url: "/img/pixx/photo_2026-10-06_13-46-17.jpg", width: 1200, height: 1500, alt: "Circle Group community opportunity" }] },
+  twitter: { card: "summary_large_image", title: "Circle Group | Bringing Opportunity Closer to Young Women", description: "A women-led Kenyan social enterprise building pathways to dignified work and sustainable livelihoods for young women.", images: ["/img/pixx/photo_2026-10-06_13-46-17.jpg"] },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -53,25 +53,25 @@ export default function NavBar() {
           : "border-transparent bg-forest"
       }`}
     >
-      <div className="container-page flex h-20 items-center gap-4 pl-0 pr-0">
-        <Link href="/#top" className="group -ml-6 flex shrink-0 items-center md:-ml-12 xl:-ml-20">
+      <div className="container-page flex h-24 items-center gap-4 pl-0 pr-0">
+        <Link href="/" className="group -ml-6 flex shrink-0 items-center md:-ml-12 xl:-ml-20">
           <Image
             src="/img/logo/Circle_Group-removebg-preview.png"
             alt="Circle Group"
-            width={220}
-            height={88}
-            className="h-14 w-44 object-contain sm:h-15 sm:w-48 md:h-16 md:w-52"
+            width={260}
+            height={104}
+            className="h-16 w-52 object-contain sm:h-18 sm:w-56 md:h-20 md:w-64"
           />
         </Link>
 
-        <nav className="hidden flex-1 items-center justify-center gap-7 lg:flex">
+        <nav className="hidden flex-1 items-center justify-center gap-8 lg:flex">
           {links.map((l) => {
             const active = activeId === l.href.slice(2);
             return (
               <Link
                 key={l.href}
                 href={l.href}
-                className={`eyebrow transition-colors ${
+                className={`text-sm font-bold uppercase tracking-widest transition-colors ${
                   active
                     ? "text-amber-light underline decoration-2 underline-offset-8"
                     : "text-white/85 hover:text-amber-light"
