@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 const links = [
   { href: "/#top", label: "About" },
@@ -14,6 +15,8 @@ const links = [
 ];
 
 export default function NavBar() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [activeId, setActiveId] = useState("top");
@@ -66,7 +69,7 @@ export default function NavBar() {
 
         <nav className="hidden flex-1 items-center justify-center gap-8 lg:flex">
           {links.map((l) => {
-            const active = activeId === l.href.slice(2);
+            const active = isHome && activeId === l.href.slice(2);
             return (
               <Link
                 key={l.href}
@@ -85,10 +88,10 @@ export default function NavBar() {
 
         <div className="hidden lg:ml-auto lg:block">
           <Link
-            href="/#work-with-us"
-            className="rounded-full bg-white px-5 py-2.5 font-body text-sm font-semibold text-forest transition-colors hover:bg-amber-light"
+            href="/donate"
+            className="rounded-full bg-amber px-5 py-2.5 font-body text-sm font-semibold text-ink transition-colors hover:bg-amber-light"
           >
-            Partner With Us
+            Donate
           </Link>
         </div>
 
@@ -120,7 +123,7 @@ export default function NavBar() {
         <div className="border-t border-white/15 bg-forest lg:hidden">
           <nav className="container-page flex flex-col gap-1 py-4">
             {links.map((l) => {
-              const active = activeId === l.href.slice(2);
+              const active = isHome && activeId === l.href.slice(2);
               return (
                 <Link
                   key={l.href}
@@ -135,11 +138,11 @@ export default function NavBar() {
               );
             })}
             <Link
-              href="/#work-with-us"
+              href="/donate"
               onClick={() => setOpen(false)}
-              className="mt-3 rounded-full bg-white px-5 py-3 text-center font-body text-sm font-semibold text-forest"
+              className="mt-3 rounded-full bg-amber px-5 py-3 text-center font-body text-sm font-semibold text-ink"
             >
-              Partner With Us
+              Donate
             </Link>
           </nav>
         </div>
