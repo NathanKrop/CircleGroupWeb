@@ -9,7 +9,7 @@ const partnerLogos = [
 
 export default function PartnerLogos() {
   return (
-    <section aria-labelledby="partner-logos-heading" className="bg-white py-16 md:py-20">
+    <section id="partner-logos" aria-labelledby="partner-logos-heading" className="bg-white py-16 md:py-20">
       <div className="container-page">
         <div className="mb-9 border-b border-ink/15 pb-5">
           <span className="eyebrow text-forest">Working together</span>

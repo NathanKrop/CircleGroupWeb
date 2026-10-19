@@ -2,22 +2,21 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
 const links = [
-  { href: "#about", label: "About" },
-  { href: "#our-work", label: "Our Work" },
-  { href: "#partners", label: "Partners" },
-  { href: "#team", label: "Our Team" },
-  { href: "#work-with-us", label: "Work With Us" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#top", label: "About" },
+  { href: "/#our-work", label: "Our Work" },
+  { href: "/#partners", label: "Partners" },
+  { href: "/#team", label: "Our Team" },
+  { href: "/#work-with-us", label: "Work With Us" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export default function NavBar() {
-  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [activeId, setActiveId] = useState("top");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -26,10 +25,25 @@ export default function NavBar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const isActive = (href: string) => {
-    if (href === "/") return pathname === "/";
-    return pathname.startsWith(href);
-  };
+  useEffect(() => {
+    const sectionIds = links.map(({ href }) => href.slice(2));
+    const updateActiveSection = () => {
+      let currentId = sectionIds[0];
+      for (const id of sectionIds) {
+        const section = document.getElementById(id);
+        if (section && section.getBoundingClientRect().top <= 140) currentId = id;
+      }
+      setActiveId(currentId);
+    };
+
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("hashchange", updateActiveSection);
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("hashchange", updateActiveSection);
+    };
+  }, []);
 
   return (
     <header
@@ -40,7 +54,7 @@ export default function NavBar() {
       }`}
     >
       <div className="container-page flex h-20 items-center gap-4 pl-0 pr-0">
-        <Link href="#top" className="group -ml-6 flex shrink-0 items-center md:-ml-12 xl:-ml-20">
+        <Link href="/#top" className="group -ml-6 flex shrink-0 items-center md:-ml-12 xl:-ml-20">
           <Image
             src="/img/logo/Circle_Group-removebg-preview.png"
             alt="Circle Group"
@@ -52,7 +66,7 @@ export default function NavBar() {
 
         <nav className="hidden flex-1 items-center justify-center gap-7 lg:flex">
           {links.map((l) => {
-            const active = isActive(l.href);
+            const active = activeId === l.href.slice(2);
             return (
               <Link
                 key={l.href}
@@ -71,7 +85,7 @@ export default function NavBar() {
 
         <div className="hidden lg:ml-auto lg:block">
           <Link
-            href="#work-with-us"
+            href="/#work-with-us"
             className="rounded-full bg-white px-5 py-2.5 font-body text-sm font-semibold text-forest transition-colors hover:bg-amber-light"
           >
             Partner With Us
@@ -106,7 +120,7 @@ export default function NavBar() {
         <div className="border-t border-white/15 bg-forest lg:hidden">
           <nav className="container-page flex flex-col gap-1 py-4">
             {links.map((l) => {
-              const active = isActive(l.href);
+              const active = activeId === l.href.slice(2);
               return (
                 <Link
                   key={l.href}
@@ -121,7 +135,7 @@ export default function NavBar() {
               );
             })}
             <Link
-              href="#work-with-us"
+              href="/#work-with-us"
               onClick={() => setOpen(false)}
               className="mt-3 rounded-full bg-white px-5 py-3 text-center font-body text-sm font-semibold text-forest"
             >
