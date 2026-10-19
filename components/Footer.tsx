@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import NewsletterSignup from "@/components/NewsletterSignup";
 
 const linkedinUrl = "https://www.linkedin.com/company/circle-group-limited/";
 const instagramUrl = "https://www.instagram.com/circle__group?stkn=aGw2Zjk4NmloNjg=";
@@ -26,7 +25,6 @@ function SocialIcon({ type }: { type: "linkedin" | "instagram" }) {
 export default function Footer() {
   return (
     <footer className="bg-forest text-white">
-      <NewsletterSignup />
       <div className="container-page py-16">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.3fr_1fr_1fr_1.1fr]">
           <div>

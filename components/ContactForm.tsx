@@ -99,7 +99,7 @@ export default function ContactForm({
       )}
       {fields.includes("message") && (
         <div className={wide}>
-          {label("contact-message", "What would you like to discuss?", true)}
+          {label("contact-message", "Message", true)}
           <textarea required rows={5} id="contact-message" name="message"
             placeholder="A short outline of what you have in mind will help us direct your enquiry."
             value={formData.message} onChange={change} className={textarea} />
