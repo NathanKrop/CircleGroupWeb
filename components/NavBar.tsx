@@ -6,13 +6,15 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 const links = [
-  { href: "/#top", label: "About" },
-  { href: "/#our-work", label: "Our Work" },
-  { href: "/#partners", label: "Partners" },
-  { href: "/#team", label: "Our Team" },
+  { href: "/#top",          label: "About" },
+  { href: "/#our-work",     label: "Our Work" },
+  { href: "/#partners",     label: "Partners" },
+  { href: "/#team",         label: "Our Team" },
   { href: "/#work-with-us", label: "Work With Us" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/contact",       label: "Contact" },
 ];
+
+const hashLinks = links.filter((l) => l.href.startsWith("/#"));
 
 export default function NavBar() {
   const pathname = usePathname();
@@ -29,24 +31,28 @@ export default function NavBar() {
   }, []);
 
   useEffect(() => {
-    const sectionIds = links.map(({ href }) => href.slice(2));
-    const updateActiveSection = () => {
-      let currentId = sectionIds[0];
+    const sectionIds = hashLinks.map(({ href }) => href.slice(2));
+    const update = () => {
+      let current = sectionIds[0];
       for (const id of sectionIds) {
-        const section = document.getElementById(id);
-        if (section && section.getBoundingClientRect().top <= 140) currentId = id;
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= 140) current = id;
       }
-      setActiveId(currentId);
+      setActiveId(current);
     };
-
-    updateActiveSection();
-    window.addEventListener("scroll", updateActiveSection, { passive: true });
-    window.addEventListener("hashchange", updateActiveSection);
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("hashchange", update);
     return () => {
-      window.removeEventListener("scroll", updateActiveSection);
-      window.removeEventListener("hashchange", updateActiveSection);
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("hashchange", update);
     };
   }, []);
+
+  const isActive = (href: string) => {
+    if (href.startsWith("/#")) return isHome && activeId === href.slice(2);
+    return pathname === href;
+  };
 
   return (
     <header
@@ -68,22 +74,19 @@ export default function NavBar() {
         </Link>
 
         <nav className="hidden flex-1 items-center justify-center gap-8 lg:flex">
-          {links.map((l) => {
-            const active = isHome && activeId === l.href.slice(2);
-            return (
-              <Link
-                key={l.href}
-                href={l.href}
-                className={`text-sm font-bold uppercase tracking-widest transition-colors ${
-                  active
-                    ? "text-amber-light underline decoration-2 underline-offset-8"
-                    : "text-white/85 hover:text-amber-light"
-                }`}
-              >
-                {l.label}
-              </Link>
-            );
-          })}
+          {links.map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              className={`text-sm font-bold uppercase tracking-widest transition-colors ${
+                isActive(l.href)
+                  ? "text-amber-light underline decoration-2 underline-offset-8"
+                  : "text-white/85 hover:text-amber-light"
+              }`}
+            >
+              {l.label}
+            </Link>
+          ))}
         </nav>
 
         <div className="hidden lg:ml-auto lg:block">
@@ -101,42 +104,27 @@ export default function NavBar() {
           onClick={() => setOpen((v) => !v)}
           className="ml-auto flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
         >
-          <span
-            className={`h-[2px] w-6 bg-white transition-transform ${
-              open ? "translate-y-2 rotate-45" : ""
-            }`}
-          />
-          <span
-            className={`h-[2px] w-6 bg-white transition-opacity ${
-              open ? "opacity-0" : ""
-            }`}
-          />
-          <span
-            className={`h-[2px] w-6 bg-white transition-transform ${
-              open ? "-translate-y-2 -rotate-45" : ""
-            }`}
-          />
+          <span className={`h-[2px] w-6 bg-white transition-transform ${open ? "translate-y-2 rotate-45" : ""}`} />
+          <span className={`h-[2px] w-6 bg-white transition-opacity ${open ? "opacity-0" : ""}`} />
+          <span className={`h-[2px] w-6 bg-white transition-transform ${open ? "-translate-y-2 -rotate-45" : ""}`} />
         </button>
       </div>
 
       {open && (
         <div className="border-t border-white/15 bg-forest lg:hidden">
           <nav className="container-page flex flex-col gap-1 py-4">
-            {links.map((l) => {
-              const active = isHome && activeId === l.href.slice(2);
-              return (
-                <Link
-                  key={l.href}
-                  href={l.href}
-                  onClick={() => setOpen(false)}
-                  className={`py-3 font-display text-xl ${
-                    active ? "text-amber-light" : "text-white"
-                  }`}
-                >
-                  {l.label}
-                </Link>
-              );
-            })}
+            {links.map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                onClick={() => setOpen(false)}
+                className={`py-3 font-display text-xl ${
+                  isActive(l.href) ? "text-amber-light" : "text-white"
+                }`}
+              >
+                {l.label}
+              </Link>
+            ))}
             <Link
               href="/donate"
               onClick={() => setOpen(false)}

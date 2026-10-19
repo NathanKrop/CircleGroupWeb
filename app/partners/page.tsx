@@ -3,12 +3,12 @@ import CirclePhotoCarousel from "@/components/CirclePhotoCarousel";
 import PartnerLogos from "@/components/PartnerLogos";
 
 const segments = [
-  ["Training institutions", "We work with Maasai National Polytechnic and other TVETs to connect young women with technical training and retention support.", "Explore a partnership ->", "/work-with-us#training"],
-  ["Grassroots partners", "HELGA and Perur Rays of Hope help connect programmes with community knowledge and relationships.", "Partner on a programme ->", "/work-with-us#programs"],
-  ["Programme partners", "Global Give Back Circle through HER Lab supports young women's pathways and opportunities.", "Explore a partnership ->", "/work-with-us#programs"],
-  ["Disability inclusion", "AIC Kajiado Child Care Centre is a partner in practical disability inclusion.", "Talk with our team ->", "/work-with-us#partner-form"],
-  ["Employers & industry", "A network of 100+ partners creates internships, workplace experience, mentorship, employment and market opportunities.", "Become an industry partner ->", "/work-with-us#industry-partner"],
-  ["Funders & government", "Foundations, development organisations, county governments and business networks can help strengthen the pathway from education to work.", "Start a conversation ->", "/work-with-us#fund"],
+  ["Training Institutions", "We work with Maasai National Polytechnic and other TVETs to connect young women with technical training and retention support.", "Explore a partnership ->", "/work-with-us#training"],
+  ["Grassroots Partners", "HELGA and Perur Rays of Hope help connect programmes with community knowledge and relationships.", "Partner on a programme ->", "/work-with-us#programs"],
+  ["Programme Partners", "Global Give Back Circle through HER Lab supports young women's pathways and opportunities.", "Explore a partnership ->", "/work-with-us#programs"],
+  ["Disability Inclusion", "AIC Kajiado Child Care Centre is a partner in practical disability inclusion.", "Talk with our team ->", "/work-with-us#partner-form"],
+  ["Employers & Industry", "A network of 100+ partners creates internships, workplace experience, mentorship, employment and market opportunities.", "Become an industry partner ->", "/work-with-us#industry-partner"],
+  ["Funders & Government", "Foundations, development organisations, county governments and business networks can help strengthen the pathway from education to work.", "Start a conversation ->", "/work-with-us#fund"],
 ];
 
 const photos = [

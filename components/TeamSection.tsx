@@ -11,7 +11,7 @@ const team = [
       { name: "Amina Mohamed", title: "Partnerships Officer" },
       { name: "Oduka Jane", title: "Assistant-Scholarships, Internships and Career Transitions Officer" },
       { name: "Prudence Olesha", title: "Internship & Job Placement Officer" },
-      { name: "Leah Wamweru", title: "Budgeting and payment officer" },
+      { name: "Leah Wamweru", title: "Budgeting and Payment Officer" },
     ],
   },
   {
