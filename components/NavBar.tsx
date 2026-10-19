@@ -67,9 +67,9 @@ export default function NavBar() {
           <Image
             src="/img/logo/Circle_Group-removebg-preview.png"
             alt="Circle Group"
-            width={260}
-            height={104}
-            className="h-16 w-52 object-contain sm:h-18 sm:w-56 md:h-20 md:w-64"
+            width={420}
+            height={160}
+            className="h-[6rem] w-[24rem] max-w-[75vw] object-contain md:h-[6.5rem] md:w-[28rem] lg:h-[7rem] lg:w-[32rem]"
           />
         </Link>
 
