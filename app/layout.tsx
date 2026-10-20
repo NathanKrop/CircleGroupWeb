@@ -3,6 +3,7 @@ import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import SiteBanner from "@/components/SiteBanner";
 
 const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces", axes: ["opsz", "SOFT", "WONK"], display: "swap" });
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -18,5 +19,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <html lang="en" className={`${fraunces.variable} ${inter.variable}`}><body className="font-body antialiased"><a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:m-3 focus:rounded focus:bg-forest focus:px-4 focus:py-2 focus:text-white">Skip to main content</a><NavBar /><main id="main-content">{children}</main><Footer /></body></html>;
+  return <html lang="en" className={`${fraunces.variable} ${inter.variable}`}><body className="font-body antialiased"><a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:m-3 focus:rounded focus:bg-forest focus:px-4 focus:py-2 focus:text-white">Skip to main content</a><SiteBanner /><NavBar /><main id="main-content">{children}</main><Footer /></body></html>;
 }

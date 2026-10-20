@@ -62,29 +62,35 @@ export default function NavBar() {
           : "border-transparent bg-forest"
       }`}
     >
-      <div className="container-page flex h-24 items-center gap-4 pl-0 pr-0">
-        <Link href="/" className="group -ml-6 flex shrink-0 items-center md:-ml-12 xl:-ml-20">
+      <div className="container-page flex h-16 items-center gap-4">
+        {/* mobile-only logo — hidden on desktop where SiteBanner shows it */}
+        <Link href="/" className="shrink-0 lg:hidden">
           <Image
-            src="/img/logo/Circle_Group-removebg-preview.png"
+            src="/img/logo/CIRCLE GROUP (CGL) Logo-01.png"
             alt="Circle Group"
-            width={420}
-            height={160}
-            className="h-[6rem] w-[24rem] max-w-[75vw] object-contain md:h-[6.5rem] md:w-[28rem] lg:h-[7rem] lg:w-[32rem]"
+            width={120}
+            height={48}
+            className="h-10 w-auto object-contain"
           />
         </Link>
 
-        <nav className="hidden flex-1 items-center justify-center gap-8 lg:flex">
+        <nav className="hidden flex-1 items-center justify-center gap-5 xl:gap-7 lg:flex">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className={`text-sm font-bold uppercase tracking-widest transition-colors ${
+              className={`group relative inline-flex items-center justify-center px-1 py-2 text-[0.72rem] font-bold uppercase tracking-[0.15em] transition-all duration-200 sm:text-[0.75rem] ${
                 isActive(l.href)
-                  ? "text-amber-light underline decoration-2 underline-offset-8"
+                  ? "text-amber-light"
                   : "text-white/85 hover:text-amber-light"
               }`}
             >
-              {l.label}
+              <span className="relative leading-none">{l.label}</span>
+              <span
+                className={`absolute -bottom-3 left-0 h-[2px] w-full rounded-full bg-amber-light transition-all duration-200 ${
+                  isActive(l.href) ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+                }`}
+              />
             </Link>
           ))}
         </nav>

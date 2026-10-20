@@ -75,7 +75,7 @@ export default function TeamSection() {
       <div className="container-page">
         <div className="mb-12 grid gap-8 md:grid-cols-[1.15fr_.85fr] md:items-end">
           <div>
-            <span className="eyebrow text-forest">Our people</span>
+            <span className="eyebrow-display text-xl text-forest sm:text-2xl">Our people</span>
             <h2 className="mt-5 max-w-3xl font-display text-4xl leading-tight text-ink sm:text-6xl">
               Built by people who believe in what young people can become.
             </h2>

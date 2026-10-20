@@ -41,6 +41,14 @@ body {
   font-weight: 700;
 }
 
+.eyebrow-display {
+  font-family: var(--font-fraunces), serif;
+  font-size: inherit;
+  letter-spacing: normal;
+  text-transform: none;
+  font-weight: 500;
+}
+
 .container-page {
   max-width: 96rem;
   margin-left: auto;
