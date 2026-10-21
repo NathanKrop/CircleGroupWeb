@@ -34,19 +34,19 @@ body {
 }
 
 .eyebrow {
-  font-family: var(--font-inter), sans-serif;
-  letter-spacing: 0.12em;
+  font-family: var(--font-jakarta), sans-serif;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   font-size: 0.72rem;
   font-weight: 700;
 }
 
 .eyebrow-display {
-  font-family: var(--font-fraunces), serif;
+  font-family: var(--font-jakarta), sans-serif;
   font-size: inherit;
-  letter-spacing: normal;
+  letter-spacing: 0.02em;
   text-transform: none;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .container-page {
@@ -98,4 +98,19 @@ textarea:focus-visible {
 
 .text-balance {
   text-wrap: balance;
+}
+
+/* Subtle font effects — clean, no decorative swashes */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-jakarta), sans-serif;
+  font-weight: 500 !important;
+  letter-spacing: -0.015em;
+}
+
+h1 { font-weight: 600 !important; letter-spacing: -0.02em; }
+
+p, li {
+  font-family: var(--font-jakarta), sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.005em;
 }

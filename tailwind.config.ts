@@ -22,8 +22,8 @@ const config: Config = {
         ink: "#17170F",
       },
       fontFamily: {
-        display: ["var(--font-fraunces)", "serif"],
-        body: ["var(--font-inter)", "sans-serif"],
+        display: ["var(--font-jakarta)", "sans-serif"],
+        body: ["var(--font-jakarta)", "sans-serif"],
       },
       backgroundImage: {
         "grain": "url('/grain.svg')",
