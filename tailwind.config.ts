@@ -11,9 +11,9 @@ const config: Config = {
         leaf: "#2E8B57",
         forest: "#1F5C3E",
         amber: {
-          DEFAULT: "#A8D038",
-          light: "#C0E060",
-          dark: "#8AB030",
+          DEFAULT: "#A6CE39",
+          light: "#A6CE39",
+          dark: "#A6CE39",
         },
         sand: {
           DEFAULT: "#FFFFFF",

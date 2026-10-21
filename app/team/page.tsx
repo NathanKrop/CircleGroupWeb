@@ -1,5 +1,5 @@
-import { redirect } from "next/navigation";
+import TeamSection from "@/components/TeamSection";
 
 export default function Team() {
-  redirect("/about#team");
+  return <TeamSection />;
 }

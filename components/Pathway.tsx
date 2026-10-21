@@ -22,7 +22,7 @@ export default function Pathway() {
         <motion.path
           d="M 60 170 L 353 120 L 646 70 L 940 24"
           fill="none"
-          stroke="#A8D038"
+          stroke="#A6CE39"
           strokeWidth="2"
           strokeDasharray="1 12"
           strokeLinecap="round"
@@ -49,9 +49,9 @@ export default function Pathway() {
             <div
               className="flex h-14 w-14 items-center justify-center rounded-full border-2 text-sm font-semibold"
               style={{
-                borderColor: "#A8D038",
+                borderColor: "#A6CE39",
                 color: "#2E8B57",
-                background: i === stages.length - 1 ? "#A8D038" : "transparent",
+                background: i === stages.length - 1 ? "#A6CE39" : "transparent",
               }}
             >
               {s.n}

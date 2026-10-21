@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 
-const input = "h-12 w-full rounded-xl border border-ink/15 bg-sand-light px-4 text-sm text-ink placeholder:text-ink/35 transition-colors hover:border-ink/30 focus:border-leaf focus:bg-white focus:outline-none focus:ring-2 focus:ring-leaf/20";
-const textarea = "w-full resize-y rounded-xl border border-ink/15 bg-sand-light px-4 py-3 text-sm text-ink placeholder:text-ink/35 transition-colors hover:border-ink/30 focus:border-leaf focus:bg-white focus:outline-none focus:ring-2 focus:ring-leaf/20";
+const input = "h-12 w-full rounded-xl border border-ink/15 bg-sand-light px-4 text-sm text-ink placeholder:text-ink/60 transition-colors hover:border-ink/30 focus:border-leaf focus:bg-white focus:outline-none focus:ring-2 focus:ring-leaf/20";
+const textarea = "w-full resize-y rounded-xl border border-ink/15 bg-sand-light px-4 py-3 text-sm text-ink placeholder:text-ink/60 transition-colors hover:border-ink/30 focus:border-leaf focus:bg-white focus:outline-none focus:ring-2 focus:ring-leaf/20";
 
 type FormType = "contact" | "partner" | "industry" | "funding" | "newsletter";
 
@@ -45,7 +45,7 @@ export default function ContactForm({
   };
 
   const label = (id: string, text: string, req = false) => (
-    <label htmlFor={id} className="mb-1.5 flex items-center gap-1 text-[.68rem] font-bold uppercase tracking-[.12em] text-ink/50">
+    <label htmlFor={id} className="mb-1.5 flex items-center gap-1 text-[.68rem] font-bold uppercase tracking-[.12em] text-ink/70">
       {text}{req && <span className="text-rust">*</span>}
     </label>
   );
@@ -110,7 +110,7 @@ export default function ContactForm({
         <button
           type="submit"
           disabled={status === "submitting"}
-          className="inline-flex items-center gap-2.5 rounded-full bg-forest px-8 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-leaf disabled:opacity-60"
+          className="inline-flex items-center gap-2.5 rounded-full bg-forest px-8 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:brightness-90 disabled:opacity-60"
         >
           {status === "submitting" ? (
             <>
@@ -119,7 +119,7 @@ export default function ContactForm({
             </>
           ) : submitLabel}
         </button>
-        <p className="text-xs text-ink/40">Required fields marked <span className="text-rust font-semibold">*</span></p>
+        <p className="text-xs text-ink/65">Required fields marked <span className="text-rust font-semibold">*</span></p>
       </div>
 
       {status === "sent" && (

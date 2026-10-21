@@ -25,11 +25,11 @@ body {
 }
 
 .page-intro {
-  background: radial-gradient(circle at 86% 12%, rgba(168, 208, 56, .18), transparent 25rem), #FFFFFF;
+  background: radial-gradient(circle at 86% 12%, rgba(166, 206, 57, .18), transparent 25rem), #FFFFFF;
 }
 
 ::selection {
-  background-color: #A8D038;
+  background-color: #A6CE39;
   color: #17170F;
 }
 
@@ -82,7 +82,7 @@ input:focus, textarea:focus, select:focus {
 }
 
 .step-line {
-  background-image: linear-gradient(to right, transparent 50%, #A8D038 50%);
+  background-image: linear-gradient(to right, transparent 50%, #A6CE39 50%);
   background-size: 14px 2px;
   background-repeat: repeat-x;
   background-position: center;
@@ -92,7 +92,7 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid #A8D038;
+  outline: 2px solid #A6CE39;
   outline-offset: 3px;
 }
 

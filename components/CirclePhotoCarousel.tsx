@@ -14,7 +14,7 @@ type Frame = "arch" | "editorial" | "ribbon";
 
 const frameStyles: Record<Frame, string> = {
   arch: "rounded-t-[7rem] rounded-bl-[2rem]",
-  editorial: "rounded-[2rem] rotate-[-1.5deg] shadow-[18px_18px_0_#A8D038]",
+  editorial: "rounded-[2rem] rotate-[-1.5deg] shadow-[18px_18px_0_#A6CE39]",
   ribbon: "rounded-[2rem] rounded-br-[7rem]",
 };
 

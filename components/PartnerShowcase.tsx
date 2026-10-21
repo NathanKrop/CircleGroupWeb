@@ -94,7 +94,7 @@ export default function PartnerShowcase() {
               animate={{ opacity: 1, x: 0, rotate: 0 }}
               exit={reduceMotion ? undefined : { opacity: 0, x: -32, rotate: -1 }}
               transition={reduceMotion ? { duration: 0 } : { duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-              className={`relative flex min-h-[15rem] flex-col justify-between overflow-hidden rounded-[1.75rem] p-7 text-ink shadow-[12px_12px_0_rgba(168,208,56,0.22)] sm:p-9 ${active.accent}`}
+              className={`relative flex min-h-[15rem] flex-col justify-between overflow-hidden rounded-[1.75rem] p-7 text-ink shadow-[12px_12px_0_rgba(166,206,57,0.22)] sm:p-9 ${active.accent}`}
             >
               <div className="flex items-start justify-between gap-5">
                 <span className={`font-display text-5xl leading-none ${active.number}`}>{active.label}</span>

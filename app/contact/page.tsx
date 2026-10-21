@@ -181,13 +181,13 @@ export default function ContactPage() {
       </section>
 
       {/* Bottom CTA strip */}
-      <section className="bg-amber/20 py-14">
+      <section className="bg-amber py-14">
         <div className="container-page flex flex-col items-center gap-6 text-center md:flex-row md:justify-between md:text-left">
           <div>
             <h2 className="font-display text-3xl text-ink">Ready to work together?</h2>
-            <p className="mt-2 text-sm text-ink/60">Explore all the ways you can partner with Circle Group.</p>
+            <p className="mt-2 text-sm text-ink/80">Explore all the ways you can partner with Circle Group.</p>
           </div>
-          <a href="/work-with-us" className="flex-shrink-0 rounded-full bg-forest px-8 py-3.5 text-sm font-semibold text-white transition hover:bg-leaf">
+          <a href="/work-with-us" className="flex-shrink-0 rounded-full bg-forest px-8 py-3.5 text-sm font-semibold text-white transition hover:brightness-90">
             Work with us →
           </a>
         </div>

@@ -6,12 +6,12 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 const links = [
-  { href: "/#top",          label: "About" },
-  { href: "/#our-work",     label: "Our Work" },
-  { href: "/#partners",     label: "Partners" },
-  { href: "/#team",         label: "Our Team" },
-  { href: "/#work-with-us", label: "Work With Us" },
-  { href: "/contact",       label: "Contact" },
+  { href: "/",            label: "Home" },
+  { href: "/our-work",   label: "Our Work" },
+  { href: "/partners",   label: "Partnerships" },
+  { href: "/team",       label: "Our Team" },
+  { href: "/work-with-us", label: "Work With Us" },
+  { href: "/contact",    label: "Contact" },
 ];
 
 const hashLinks = links.filter((l) => l.href.startsWith("/#"));

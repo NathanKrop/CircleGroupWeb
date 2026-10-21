@@ -76,9 +76,9 @@ export default function TeamSection() {
         <div className="mb-12 grid gap-8 md:grid-cols-[1.15fr_.85fr] md:items-end">
           <div>
             <span className="eyebrow-display text-xl text-forest sm:text-2xl">Our people</span>
-            <h2 className="mt-5 max-w-3xl font-display text-4xl leading-tight text-ink sm:text-6xl">
+            <h1 className="mt-5 max-w-3xl font-display text-4xl leading-tight text-ink sm:text-6xl">
               Built by people who believe in what young people can become.
-            </h2>
+            </h1>
           </div>
           <p className="max-w-md border-l border-amber pl-6 text-lg leading-relaxed text-ink/75">
             We bring lived experience, practical expertise, and a shared commitment to creating pathways from learning to meaningful work.
