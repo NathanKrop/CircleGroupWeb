@@ -14,7 +14,7 @@ export default function SiteBanner() {
 
       <CircleGroupBrand
         className="container-page flex items-center justify-between gap-4 py-3"
-        logoClassName="h-20 w-auto object-contain"
+        logoClassName="h-24 w-auto object-contain sm:h-28"
         graphicClassName="h-[100px] w-[860px] shrink-0"
         priority
       />

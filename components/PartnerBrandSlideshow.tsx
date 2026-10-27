@@ -55,7 +55,7 @@ export default function PartnerBrandSlideshow() {
       role="region"
       aria-label="Circle Group partnership stories"
       aria-roledescription="carousel"
-      className="relative overflow-hidden rounded-[2rem] border border-forest/10 bg-sand-light p-6 shadow-[18px_18px_0_#A6CE39] sm:p-8"
+      className="relative w-full overflow-hidden rounded-[2rem] border border-forest/10 bg-sand-light p-4 shadow-[10px_10px_0_#A6CE39] sm:p-5"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       onFocusCapture={() => setFocusWithin(true)}
@@ -74,11 +74,11 @@ export default function PartnerBrandSlideshow() {
         }}
       />
 
-      <div className="relative flex min-h-[31rem] flex-col sm:min-h-[34rem]">
+      <div className="relative flex min-h-[20rem] flex-col sm:min-h-[24rem]">
         <div className="flex flex-1 flex-col justify-center py-3">
           <CircleGroupBrand
-            className="flex w-full flex-col items-center gap-5"
-            logoClassName="h-28 w-auto object-contain sm:h-32"
+            className="flex w-full flex-col items-center gap-4"
+            logoClassName="h-24 w-auto object-contain sm:h-28"
             graphicClassName="hidden h-auto w-full lg:block"
           />
         </div>

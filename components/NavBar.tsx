@@ -90,7 +90,7 @@ export default function NavBar() {
       <div className="lg:hidden">
         <div className="flex h-14 items-center gap-3 px-4">
           <Link href="/" className="shrink-0">
-            <Image src="/img/logo/CIRCLE GROUP (CGL) Logo-01.png" alt="Circle Group" width={100} height={40} className="h-8 w-auto object-contain" />
+            <Image src="/img/logo/CIRCLE GROUP (CGL) Logo-01.png" alt="Circle Group" width={120} height={48} className="h-10 w-auto object-contain" />
           </Link>
           <div className="ml-auto">
             <Link href="/donate" className="rounded-full bg-amber px-4 py-2 text-xs font-semibold text-ink">
