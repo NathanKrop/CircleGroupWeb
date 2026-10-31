@@ -88,9 +88,9 @@ export default function NavBar() {
 
       {/* Mobile: logo left + scrollable nav links + donate button */}
       <div className="lg:hidden">
-        <div className="flex h-14 items-center gap-3 px-4">
+        <div className="flex h-28 items-center gap-3 bg-sand-light px-4 sm:h-32">
           <Link href="/" className="shrink-0">
-            <Image src="/img/logo/CIRCLE GROUP (CGL) Logo-01.png" alt="Circle Group" width={120} height={48} className="h-10 w-auto object-contain" />
+            <Image src="/img/logo/CIRCLE GROUP (CGL) Logo-01.png" alt="Circle Group" width={260} height={104} className="h-24 w-auto object-contain sm:h-28" />
           </Link>
           <div className="ml-auto">
             <Link href="/donate" className="rounded-full bg-amber px-4 py-2 text-xs font-semibold text-ink">
