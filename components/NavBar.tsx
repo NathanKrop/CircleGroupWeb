@@ -86,7 +86,7 @@ export default function NavBar() {
         </div>
       </div>
 
-      {/* Mobile: logo left + scrollable nav links + donate button */}
+      {/* Mobile: logo, donate button, and wrapping nav links */}
       <div className="lg:hidden">
         <div className="flex h-28 items-center gap-3 bg-sand-light px-4 sm:h-32">
           <Link href="/" className="shrink-0">
@@ -98,12 +98,36 @@ export default function NavBar() {
             </Link>
           </div>
         </div>
-        <nav className="flex gap-1 overflow-x-auto px-4 pb-2 scrollbar-none">
+        <div className="bg-sand-light px-4 py-2">
+          <div className="mx-auto flex max-w-sm items-center justify-center gap-3">
+            <svg
+              viewBox="0 0 110 64"
+              className="h-12 w-20 shrink-0"
+              role="img"
+              aria-label="Rising chart showing progress from access to earning"
+            >
+              <rect x="8" y="42" width="17" height="16" rx="3" fill="#B6D29E" />
+              <rect x="29" y="32" width="17" height="26" rx="3" fill="#8AB57B" />
+              <rect x="50" y="21" width="17" height="37" rx="3" fill="#609F6D" />
+              <rect x="71" y="8" width="17" height="50" rx="3" fill="#7BAE6C" />
+              <path d="M5 60h91" fill="none" stroke="#7BAE6C" strokeWidth="2" strokeLinecap="round" />
+            </svg>
+            <div className="min-w-0">
+              <p className="font-serif text-sm italic leading-tight text-forest">
+                Bringing opportunity closer to young women.
+              </p>
+              <p className="mt-1 text-[0.48rem] font-bold uppercase leading-tight tracking-[0.1em] text-forest/65">
+                Access · Retention · Completion · Transition · Earn
+              </p>
+            </div>
+          </div>
+        </div>
+        <nav className="flex flex-wrap justify-center gap-1 px-2 pb-2">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className={`shrink-0 rounded-full px-3 py-1.5 text-[0.65rem] font-bold uppercase tracking-[0.12em] transition-colors ${
+              className={`rounded-full px-2 py-1.5 text-[0.6rem] font-bold uppercase tracking-[0.1em] transition-colors ${
                 isActive(l.href)
                   ? "bg-amber text-ink"
                   : "text-white/80 hover:text-white"
