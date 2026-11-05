@@ -184,7 +184,7 @@ const privacySections: { title: string; content: ReactNode }[] = [
           <li>Enquiries and partnership correspondence: two years from your last contact with us. Each time you contact us, this period starts again.</li>
           <li>Newsletter subscriptions: until you unsubscribe, or until you have not opened our emails for two years, whichever comes first.</li>
           <li>Donation and financial records: seven years, as required by section 630 of the Companies Act, 2015.</li>
-          <li>Program participant records: for the duration of the program and usually for up to seven years afterwards, to meet audit and funder reporting requirements. The exact period is set out when you join a program.</li>
+          <li>Programme participant records: for the duration of the programme and usually for up to seven years afterwards, to meet audit and funder reporting requirements. The exact period is set out when you join a programme.</li>
           <li>Website analytics: 14 months, in aggregate form.</li>
         </ul>
         <p>
