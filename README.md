@@ -37,40 +37,41 @@ npm start       # serve the production build
 
 - `/` — Home (hero, focus areas, Pathway signature, animated stats, testimonial, CTA)
 - `/about` — mission, approach, team grid
-- `/programs` — programme hub (6 cards)
-- `/programs/[slug]` — individual programme detail pages (fully populated for all 6)
+- `/programs` — program hub (6 cards)
+- `/programs/[slug]` — individual program detail pages (fully populated for all 6)
 - `/partners` — partner segments (schools, employers, dev orgs, communities)
 - `/research` — research/insights hub
 - `/stories` — stories/blog index
-- `/get-involved` — three segmented forms (partner / mentor / apply)
+- `/work-with-us` — partner, employer and funding enquiries
 - `/contact` — contact info + form
-- `/policies` — safeguarding & privacy placeholder
+- `/policies` — safeguarding status and the approved privacy policy, with section anchors
 
-## What's still pending — do not launch without replacing or confirming these
+## Handover and content updates
 
-Pending content is marked in-page or listed below so it is easy to find and
-replace. In particular:
+The site is a Next.js application. Page content is maintained in `app/` route
+files and shared page sections/forms are in `components/`. Images and logos are
+in `public/img/`; global styles and design tokens are in `app/globals.css` and
+`tailwind.config.ts`. There is no content management system, so edits are made
+in the relevant TSX file, reviewed locally with `npm run dev`, and published
+through the hosting provider's deployment flow. Run `npm run build` before
+publishing.
 
-1. **Impact numbers** on the homepage stats block — currently illustrative.
-2. **Team bios** on `/team` — official portraits and names are in place; confirm Jane Oduka's title and add approved short biographies.
-3. **All photography** — hero and section images are currently styled
-   placeholder blocks (amber ascending-line graphic on savanna green). Swap in
-   real participant photography via `next/image` once supplied, with
-   dignity-preserving alt text.
-4. **Phone number & office address** — footer, `/contact`.
-5. **Partner logos** — `/partners` logo wall.
-6. **Safeguarding & privacy policy text** — `/policies`. This is non-negotiable
-   before launch given the youth-focused audience.
-7. **Forms** — `components/ContactForm.tsx` currently just flips local state on
-   submit. Wire it to a Supabase table + email notification (see the original
-   build prompt's Technical Architecture section) before this goes live.
+Circle Group should own the hosting, Supabase and Resend accounts under its
+shared email address and invite developers as named users. Keep credentials and
+recovery codes in the organisation's password manager, not in this repository.
 
-## Next steps (per the original build prompt)
+## Remaining handover items
 
-- Set up the Supabase schema (`programs`, `stories`, `research`, `team_members`,
-  `testimonials`, `partners`) and wire the three forms to it.
-- Swap placeholder imagery for real photography, using `next/image` with
-  proper `sizes` and blur placeholders.
-- Add JSON-LD `Organization`/`NGO` schema and per-page OpenGraph images.
-- Confirm final domain and point DNS once client confirms the legal entity
-  details flagged in the original build prompt.
+- Publish Circle Group's safeguarding policy after approval.
+- Configure the Supabase and Resend environment variables in the hosting
+  provider. Verify `circlegroupke.org` as a Resend sending domain, then publish
+  the DNS records Resend generates.
+- For an existing Supabase project, run
+  `drop policy if exists "Allow authenticated reads" on public.contact_leads;`
+  in the Supabase SQL Editor. Form submissions remain available to project
+  administrators, but are no longer readable through the API by every signed-in
+  user.
+- The contact API saves submissions to `contact_leads`, notifies
+  `CONTACT_EMAIL`, sets notification Reply-To to the submitter, and sends a
+  separate confirmation to the submitter.
+- Add approved team biographies and any outstanding partner logos when supplied.

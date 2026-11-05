@@ -111,8 +111,7 @@ alter table public.contact_leads enable row level security;
 create policy "Allow anonymous contact submissions" on public.contact_leads
   for insert to anon with check (true);
 
-create policy "Allow authenticated reads" on public.contact_leads
-  for select to authenticated using (true);
+drop policy if exists "Allow authenticated reads" on public.contact_leads;
 
 -- Allow public reads for content tables
 alter table public.programs enable row level security;

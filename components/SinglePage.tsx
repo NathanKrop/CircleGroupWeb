@@ -9,7 +9,7 @@ const pathways = [
 ];
 
 const impact = [
-  ["2,500+", "Young women reached through life skills, career and work-readiness programmes"],
+  ["2,500+", "Young women reached through life skills, career and work-readiness programs"],
   ["1,200+", "Rural young women supported to access technical training"],
   ["200+", "Connected to internships and workplace experience"],
   ["170", "Supported with seed capital to start or grow businesses"],
@@ -31,7 +31,7 @@ export default function SinglePage() {
             <Link href="/work-with-us" className="rounded-full bg-leaf px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-forest">Work with us</Link>
           </div>
         </div>
-        <figure className="group overflow-hidden rounded-[2rem] bg-white shadow-soft"><div className="relative aspect-[4/5]"><Image src="/img/home/photo_2026-10-07_11-44-41.jpg" alt="Young women taking part in a Circle Group community programme" fill sizes="(max-width: 1024px) 100vw, 45vw" priority className="object-cover transition duration-700 group-hover:scale-105" /></div><figcaption className="rounded-b-[2rem] p-5 text-sm text-ink/70">Opportunity grows when the right support meets a woman's own ambition.</figcaption></figure>
+        <figure className="group overflow-hidden rounded-[2rem] bg-white shadow-soft"><div className="relative aspect-[4/5]"><Image src="/img/home/photo_2026-10-07_11-44-41.jpg" alt="Young women taking part in a Circle Group community program" fill sizes="(max-width: 1024px) 100vw, 45vw" priority className="object-cover transition duration-700 group-hover:scale-105" /></div><figcaption className="rounded-b-[2rem] p-5 text-sm text-ink/70">Opportunity grows when the right support meets a woman's own ambition.</figcaption></figure>
       </div>
     </section>
 
@@ -45,7 +45,7 @@ export default function SinglePage() {
     <section className="bg-forest py-16 text-white md:pb-18 md:pt-20"><div className="container-page"><span className="eyebrow-display text-xl text-amber sm:text-2xl">Our impact</span><h2 className="mt-4 max-w-3xl font-display text-4xl leading-[0.95] sm:text-5xl">Opening more routes from capability to income.</h2><div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-white/15 bg-white/15 sm:grid-cols-2 lg:grid-cols-3">{impact.map(([number, description]) => <article key={number + description} className="bg-forest p-7 md:p-8"><p className="font-display text-5xl text-amber">{number}</p><p className="mt-3 text-sm leading-relaxed text-white/75">{description}</p></article>)}</div><p className="mt-14 text-center font-display text-xl text-white/90 sm:text-2xl">Access <span className="text-amber">→</span> Retention <span className="text-amber">→</span> Completion <span className="text-amber">→</span> Transition <span className="text-amber">→</span> Sustainable earning</p></div></section>
 
     {/* WHAT WE HAVE LEARNED */}
-    <section className="bg-white py-20 text-ink md:py-28"><div className="container-page grid gap-10 lg:grid-cols-[.7fr_1.3fr]"><span className="eyebrow-display text-xl text-forest sm:text-2xl">What we have learned</span><div><h2 className="font-display text-4xl leading-tight text-ink sm:text-5xl">The challenge is not simply lack of skills. It is lack of an accessible pathway from capability to income.</h2><p className="mt-6 text-lg leading-relaxed text-ink/75">A certificate does not automatically create a job. Business training does not automatically create a customer. Capital does not automatically create a viable enterprise. So we start with a different question:</p><p className="mt-5 font-display text-3xl text-forest">What stands between this young woman and sustainable income?</p><p className="mt-5 font-semibold text-ink/80">The pathway adapts to the woman—not the woman to the programme.</p></div></div></section>
+    <section className="bg-white py-20 text-ink md:py-28"><div className="container-page grid gap-10 lg:grid-cols-[.7fr_1.3fr]"><span className="eyebrow-display text-xl text-forest sm:text-2xl">What we have learned</span><div><h2 className="font-display text-4xl leading-tight text-ink sm:text-5xl">The challenge is not simply lack of skills. It is lack of an accessible pathway from capability to income.</h2><p className="mt-6 text-lg leading-relaxed text-ink/75">A certificate does not automatically create a job. Business training does not automatically create a customer. Capital does not automatically create a viable enterprise. So we start with a different question:</p><p className="mt-5 font-display text-3xl text-forest">What stands between this young woman and sustainable income?</p><p className="mt-5 font-semibold text-ink/80">The pathway adapts to the woman, not the woman to the program.</p></div></div></section>
 
   </>;
 }

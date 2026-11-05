@@ -58,7 +58,7 @@ export default function ContactPage() {
             Let's start a conversation.
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-white/75">
-            Whether you want to partner, fund our work, hire our talent, or simply learn more — we'd love to hear from you. Our team typically responds within 2 business days.
+            Whether you want to partner, fund our work, hire our talent, or simply learn more, we would love to hear from you. Our team typically responds within 2 business days.
           </p>
         </div>
       </section>
@@ -67,7 +67,7 @@ export default function ContactPage() {
       <section className="bg-sand-light py-20 md:py-28">
         <div className="container-page grid gap-12 lg:grid-cols-[1fr_1.4fr]">
 
-          {/* Left — details */}
+          {/* Left: contact details */}
           <div className="flex flex-col gap-8">
 
             {/* Direct contact */}
@@ -114,7 +114,7 @@ export default function ContactPage() {
             {/* Socials */}
             <div className="rounded-2xl border border-ink/10 bg-white p-8">
               <h2 className="font-display text-2xl text-ink">Follow us</h2>
-              <p className="mt-2 text-sm leading-relaxed text-ink/60">Stay updated on our programmes, stories and opportunities.</p>
+              <p className="mt-2 text-sm leading-relaxed text-ink/60">Stay updated on our programs, stories and opportunities.</p>
               <div className="mt-6 flex flex-col gap-3">
                 <a href={linkedinUrl} target="_blank" rel="noreferrer"
                   className="group flex items-center gap-4 rounded-xl border border-ink/10 p-4 transition hover:border-forest hover:bg-forest hover:text-white">
@@ -123,7 +123,7 @@ export default function ContactPage() {
                   </span>
                   <div>
                     <p className="text-sm font-semibold text-ink transition group-hover:text-white">LinkedIn</p>
-                    <p className="text-xs text-ink/50 transition group-hover:text-white/70">Circle Group Limited</p>
+                    <p className="text-xs text-ink/50 transition group-hover:text-white/70">Circle Group</p>
                   </div>
                   <span className="ml-auto text-ink/30 transition group-hover:text-white/60">→</span>
                 </a>
@@ -161,7 +161,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Right — form */}
+          {/* Right: form */}
           <div className="rounded-[2rem] overflow-hidden bg-white shadow-soft border border-ink/8">
             <div className="bg-forest px-8 py-8 sm:px-10">
               <span className="eyebrow text-amber">Send a message</span>

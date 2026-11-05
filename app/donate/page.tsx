@@ -3,7 +3,7 @@ import ContactForm from "@/components/ContactForm";
 
 const principles = [
   ["Transparent stewardship", "Every contribution is tracked, reported and audited. You will always know where your money went."],
-  ["Direct impact", "Funds go directly to participants — scholarships, seed capital, training costs and community grants."],
+  ["Direct impact", "Funds go directly to participants, including scholarships, seed capital, training costs and community grants."],
   ["Dignity-first", "We never use participant stories or images without consent. Your donation supports people, not narratives."],
 ];
 
@@ -103,7 +103,7 @@ export default function Donate() {
               Hire our talent
             </Link>
             <Link href="/work-with-us#programs" className="rounded-full border-2 border-forest px-7 py-3.5 text-sm font-semibold text-forest transition hover:bg-forest hover:text-white">
-              Partner on a programme
+              Partner on a program
             </Link>
             <Link href="/work-with-us" className="rounded-full bg-forest px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-leaf">
               Explore all ways to work with us

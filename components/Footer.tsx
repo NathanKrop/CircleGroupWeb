@@ -49,7 +49,7 @@ export default function Footer() {
               <li><Link href="/#work-with-us">Invest in Young People</Link></li>
               <li><Link href="/#partners">Become an Industry Partner</Link></li>
               <li><Link href="/#team">Careers</Link></li>
-              <li><a href="mailto:info@circlegroup.co.ke?subject=Safeguarding%20and%20privacy">Safeguarding &amp; Privacy</a></li>
+              <li><Link href="/policies#safeguarding">Safeguarding &amp; Privacy</Link></li>
             </ul>
           </div>
           <div>

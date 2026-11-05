@@ -18,7 +18,9 @@ export default function ContactForm({
   formType?: FormType;
   defaultInterest?: string;
 }) {
-  const [status, setStatus] = useState<"idle" | "submitting" | "sent" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "submitting" | "sent" | "sent_no_confirmation" | "saved_without_notification" | "error"
+  >("idle");
   const [formData, setFormData] = useState({
     name: "", org: "", sector: "", email: "", phone: "",
     interest: defaultInterest || "", message: "",
@@ -36,8 +38,15 @@ export default function ContactForm({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...formData, formType }),
       });
-      if (!res.ok) throw new Error();
-      setStatus("sent");
+      const result = await res.json();
+      if (!res.ok) {
+        if (result.submissionSaved) {
+          setStatus("saved_without_notification");
+          return;
+        }
+        throw new Error();
+      }
+      setStatus(result.confirmationSent === false ? "sent_no_confirmation" : "sent");
       setFormData({ name: "", org: "", sector: "", email: "", phone: "", interest: defaultInterest || "", message: "" });
     } catch {
       setStatus("error");
@@ -129,6 +138,23 @@ export default function ContactForm({
             <p className="text-sm font-semibold text-forest">Enquiry sent successfully</p>
             <p className="mt-0.5 text-xs text-forest/70">Our team will be in touch within 2 business days.</p>
           </div>
+        </div>
+      )}
+      {status === "sent_no_confirmation" && (
+        <div className={`flex items-start gap-3 rounded-xl bg-[#dfeec6] px-5 py-4 ${wide}`}>
+          <span className="mt-0.5 text-base font-bold text-leaf">✓</span>
+          <p className="text-sm text-forest">
+            Your enquiry was received. We could not send an automatic confirmation, but our team will be in touch within 2 business days.
+          </p>
+        </div>
+      )}
+      {status === "saved_without_notification" && (
+        <div className={`flex items-start gap-3 rounded-xl bg-amber/20 px-5 py-4 ${wide}`}>
+          <span className="mt-0.5 text-base font-bold text-forest">!</span>
+          <p className="text-sm text-forest">
+            Your enquiry was saved, but our team could not be notified. Please email{" "}
+            <a href="mailto:info@circlegroup.co.ke" className="font-medium underline">info@circlegroup.co.ke</a>.
+          </p>
         </div>
       )}
       {status === "error" && (

@@ -4,9 +4,9 @@ import PartnerLogos from "@/components/PartnerLogos";
 
 const segments = [
   ["Training Institutions", "We work with local technical institutions to connect young women with practical training and retention support.", "Explore a partnership ->", "/work-with-us#training"],
-  ["Grassroots Partners", "Community organisations help connect programmes with local knowledge, trust and relationships.", "Partner on a programme ->", "/work-with-us#programs"],
-  ["Programme Partners", "Partner organisations help create stronger pathways and more opportunities for young women to move from learning to work.", "Explore a partnership ->", "/work-with-us#programs"],
-  ["Disability Inclusion", "Inclusive programmes and support services help remove practical barriers to learning and participation.", "Talk with our team ->", "/work-with-us#partner-form"],
+  ["Grassroots Partners", "Community organisations help connect programs with local knowledge, trust and relationships.", "Partner on a program ->", "/work-with-us#programs"],
+  ["Program Partners", "Partner organisations help create stronger pathways and more opportunities for young women to move from learning to work.", "Explore a partnership ->", "/work-with-us#programs"],
+  ["Disability Inclusion", "Inclusive programs and support services help remove practical barriers to learning and participation.", "Talk with our team ->", "/work-with-us#partner-form"],
   ["Employers & Industry", "A wide network of employers and industry partners creates internships, workplace experience, mentorship and job opportunities.", "Become an industry partner ->", "/work-with-us#industry-partner"],
   ["Funders & Government", "Foundations, development organisations and public partners can help strengthen the pathway from education to work.", "Start a conversation ->", "/work-with-us#fund"],
 ];

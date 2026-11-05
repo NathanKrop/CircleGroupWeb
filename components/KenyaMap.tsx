@@ -4,17 +4,17 @@ import { useState } from "react";
 const PIN_COLOR = "#E8A33D";
 
 const locations = [
-  { name: "Nairobi",      px: 58, py: 62, desc: "National headquarters & programme hub" },
+  { name: "Nairobi",      px: 58, py: 62, desc: "National headquarters & program hub" },
   { name: "Kiambu",       px: 57, py: 57, desc: "Skills training & community outreach" },
-  { name: "Narok",        px: 46, py: 67, desc: "Rural enterprise & inclusion programmes" },
+  { name: "Narok",        px: 46, py: 67, desc: "Rural enterprise & inclusion programs" },
   { name: "Meru",         px: 68, py: 46, desc: "TVET access & mentorship support" },
-  { name: "Kajiado",      px: 60, py: 71, desc: "Disability inclusion & enterprise programmes" },
+  { name: "Kajiado",      px: 60, py: 71, desc: "Disability inclusion & enterprise programs" },
   { name: "West Pokot",   px: 38, py: 28, desc: "16 savings groups established" },
-  { name: "Turkana",      px: 28, py: 14, desc: "Programme work area" },
-  { name: "Baringo",      px: 50, py: 38, desc: "Programme work area" },
-  { name: "Samburu",      px: 63, py: 30, desc: "Programme work area" },
-  { name: "Taita Taveta", px: 65, py: 80, desc: "Programme work area" },
-  { name: "Makueni",      px: 62, py: 75, desc: "Programme work area" },
+  { name: "Turkana",      px: 28, py: 14, desc: "Program work area" },
+  { name: "Baringo",      px: 50, py: 38, desc: "Program work area" },
+  { name: "Samburu",      px: 63, py: 30, desc: "Program work area" },
+  { name: "Taita Taveta", px: 65, py: 80, desc: "Program work area" },
+  { name: "Makueni",      px: 62, py: 75, desc: "Program work area" },
 ];
 
 function Pin({ size = 22, active = false }: { size?: number; active?: boolean }) {
