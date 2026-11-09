@@ -9,7 +9,7 @@ const team = [
     members: [
       { name: "Mercy Arita", title: "University Scholarships Officer" },
       { name: "Amina Mohamed", title: "Partnerships Officer" },
-      { name: "Oduka Jane", title: "Assistant-Scholarships, Internships and Career Transitions Officer" },
+      { name: "Oduka Jane", title: "Assistant-Scholarships, Internships and Career Transitions" },
       { name: "Prudence Olesha", title: "Internship & Job Placement Officer" },
       { name: "Leah Wamweru", title: "Budgeting and Payment Officer" },
     ],
